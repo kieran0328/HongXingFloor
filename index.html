@@ -3,387 +3,279 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>鈺峰地材磁磚選品店 | 打造理想空間基石</title>
+    <title>台中宏興專業地板 | 塑膠地板・SPC石塑地板・超耐磨木地板・地磚・窗簾地毯</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts Inter & Noto Sans TC -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        stone: {
-                            850: '#23201d',
-                            900: '#1c1917',
+                        brand: {
+                            50: '#fdf8f4',
+                            100: '#f9eee4',
+                            600: '#d97736',
+                            700: '#c05621',
+                            800: '#9c4115',
+                            900: '#7c3412',
                         },
-                        amber: {
-                            650: '#b47833',
-                            750: '#8c5923',
+                        dark: {
+                            800: '#1e242b',
+                            900: '#14181d',
+                            950: '#0d1013'
                         }
-                    },
-                    fontFamily: {
-                        sans: ['"Noto Sans TC"', 'sans-serif'],
-                        serif: ['"Playfair Display"', 'serif'],
                     }
                 }
             }
         }
     </script>
     <style>
-        .backdrop-glass {
+        .custom-glass {
+            background: rgba(20, 24, 29, 0.85);
             backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
         }
     </style>
 </head>
-<body class="bg-stone-50 text-stone-800 font-sans antialiased selection:bg-amber-100 selection:text-amber-900">
+<body class="bg-dark-950 text-slate-100 font-sans antialiased selection:bg-brand-600 selection:text-white">
 
-    <!-- 頂部資訊列 (Topbar) -->
-    <div class="bg-stone-900 text-stone-300 text-xs py-2 px-4 border-b border-stone-800">
-        <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
-            <div class="flex items-center gap-4">
-                <span><i class="fa-solid fa-location-dot text-amber-500 mr-1.5"></i> 實體展示門市（歡迎預約看樣）</span>
-                <span class="hidden sm:inline"><i class="fa-solid fa-clock text-amber-500 mr-1.5"></i> 週一至週六 08:30 - 18:30</span>
+    <!-- 頂部快訊資訊列 -->
+    <div class="bg-dark-900 border-b border-slate-800 text-xs py-2 px-4">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2 text-slate-300">
+            <div class="flex items-center gap-4 flex-wrap justify-center">
+                <span class="flex items-center gap-1 text-brand-600">
+                    <i data-lucide="map-pin" class="w-3.5 h-3.5"></i> 台中在地專業服務・全台供貨施工諮詢
+                </span>
+                <span class="hidden md:inline text-slate-600">|</span>
+                <span class="flex items-center gap-1">
+                    <i data-lucide="clock" class="w-3.5 h-3.5 text-slate-400"></i> 週一至週六 08:30 - 18:30
+                </span>
             </div>
             <div class="flex items-center gap-4">
-                <a href="tel:0423456789" class="hover:text-amber-400 transition-colors"><i class="fa-solid fa-phone mr-1"></i> (04) 2345-6789</a>
-                <span class="text-stone-600">|</span>
-                <a href="#contact" class="hover:text-amber-400 transition-colors">工班批發諮詢</a>
+                <a href="tel:0982226991" class="hover:text-white flex items-center gap-1 transition">
+                    <i data-lucide="phone-call" class="w-3.5 h-3.5 text-brand-600"></i> 0982 226 991
+                </a>
+                <span class="text-slate-600">|</span>
+                <a href="mailto:vivian662@yahoo.com.tw" class="hover:text-white flex items-center gap-1 transition">
+                    <i data-lucide="mail" class="w-3.5 h-3.5 text-slate-400"></i> vivian662@yahoo.com.tw
+                </a>
             </div>
         </div>
     </div>
 
-    <!-- 導航列 (Navbar) -->
-    <header class="sticky top-0 z-40 bg-stone-900/90 backdrop-glass border-b border-stone-800/80 transition-all duration-300">
+    <!-- 導航列 Header -->
+    <header class="sticky top-0 z-40 custom-glass border-b border-slate-800/80">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <!-- 品牌 Logo -->
-            <a href="#" class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-amber-600 to-amber-800 flex items-center justify-center text-white shadow-md shadow-amber-950/20">
-                    <i class="fa-solid fa-border-all text-xl"></i>
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-11 h-11 rounded-lg bg-brand-600 flex items-center justify-center text-white shadow-lg shadow-brand-600/30 group-hover:scale-105 transition transform">
+                    <i data-lucide="layers" class="w-6 h-6"></i>
                 </div>
                 <div>
-                    <span class="text-xl font-bold tracking-wider text-stone-100 block font-serif">鈺峰地材</span>
-                    <span class="text-[10px] tracking-widest text-amber-400/90 uppercase block font-medium">TILES & FLOORING STUDIO</span>
+                    <span class="text-xl font-bold tracking-tight text-white block">台中宏興專業地板</span>
+                    <span class="text-xs text-slate-400 uppercase tracking-widest block">HONG XING FLOORING STUDIO</span>
                 </div>
             </a>
 
-            <!-- 桌面版選單 -->
-            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-stone-300">
-                <a href="#about" class="hover:text-amber-400 transition-colors">關於我們</a>
-                <a href="#catalog" class="hover:text-amber-400 transition-colors">地材型錄</a>
-                <a href="#cases" class="hover:text-amber-400 transition-colors">實景完工案例</a>
-                <a href="#calculator" class="hover:text-amber-400 transition-colors">坪數用磚試算</a>
-                <a href="#contact" class="hover:text-amber-400 transition-colors">門市聯絡</a>
+            <!-- 桌機選單 -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+                <a href="#about" class="hover:text-brand-600 transition">關於宏興</a>
+                <a href="#catalog" class="hover:text-brand-600 transition">材料型錄</a>
+                <a href="#calculator" class="hover:text-brand-600 transition">坪數用料試算</a>
+                <a href="#cases" class="hover:text-brand-600 transition">完工實景</a>
+                <a href="#contact" class="hover:text-brand-600 transition">聯絡諮詢</a>
             </nav>
 
-            <!-- 諮詢 CTA 按鈕 -->
             <div class="hidden md:flex items-center gap-3">
-                <button onclick="openLineModal()" class="px-5 py-2.5 rounded-full text-xs font-semibold bg-emerald-600 hover:bg-emerald-500 text-white transition-all shadow-md shadow-emerald-950/20 flex items-center gap-2">
-                    <i class="fa-brands fa-line text-lg"></i>
-                    <span>加入官方 LINE 諮詢</span>
+                <button onclick="openLineModal()" class="flex items-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-2.5 rounded-lg text-sm font-medium transition shadow-lg shadow-emerald-600/20 active:scale-95">
+                    <i data-lucide="message-circle" class="w-4 h-4"></i>
+                    加入官方 LINE 諮詢
                 </button>
             </div>
 
-            <!-- 手機版選單切換按鈕 -->
-            <button id="mobileMenuBtn" class="md:hidden text-stone-300 hover:text-white p-2">
-                <i class="fa-solid fa-bars text-xl"></i>
+            <!-- 手機選單按鈕 -->
+            <button id="mobileMenuBtn" class="md:hidden p-2 text-slate-300 hover:text-white">
+                <i data-lucide="menu" class="w-6 h-6"></i>
             </button>
         </div>
 
-        <!-- 手機版選單展開 -->
-        <div id="mobileMenu" class="hidden md:hidden bg-stone-900 border-b border-stone-800 px-6 py-4 space-y-3">
-            <a href="#about" class="block text-stone-300 hover:text-amber-400 py-1" onclick="toggleMobileMenu()">關於我們</a>
-            <a href="#catalog" class="block text-stone-300 hover:text-amber-400 py-1" onclick="toggleMobileMenu()">地材型錄</a>
-            <a href="#cases" class="block text-stone-300 hover:text-amber-400 py-1" onclick="toggleMobileMenu()">實景完工案例</a>
-            <a href="#calculator" class="block text-stone-300 hover:text-amber-400 py-1" onclick="toggleMobileMenu()">坪數用磚試算</a>
-            <a href="#contact" class="block text-stone-300 hover:text-amber-400 py-1" onclick="toggleMobileMenu()">門市聯絡</a>
-            <button onclick="openLineModal(); toggleMobileMenu();" class="w-full mt-3 py-2.5 rounded-lg text-xs font-semibold bg-emerald-600 text-white flex items-center justify-center gap-2">
-                <i class="fa-brands fa-line text-lg"></i>
-                <span>官方 LINE 線上諮詢</span>
+        <!-- 手機展開選單 -->
+        <div id="mobileMenu" class="hidden md:hidden bg-dark-900 border-b border-slate-800 px-4 py-5 space-y-3">
+            <a href="#about" class="block text-slate-300 hover:text-brand-600 py-1">關於宏興</a>
+            <a href="#catalog" class="block text-slate-300 hover:text-brand-600 py-1">材料型錄</a>
+            <a href="#calculator" class="block text-slate-300 hover:text-brand-600 py-1">坪數用料試算</a>
+            <a href="#cases" class="block text-slate-300 hover:text-brand-600 py-1">完工實景</a>
+            <a href="#contact" class="block text-slate-300 hover:text-brand-600 py-1">聯絡諮詢</a>
+            <button onclick="openLineModal()" class="w-full mt-2 flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-2.5 rounded-lg text-sm font-medium transition">
+                <i data-lucide="message-circle" class="w-4 h-4"></i> 加入官方 LINE 諮詢
             </button>
         </div>
     </header>
 
-    <!-- 1. 品牌 Hero Banner -->
-    <section class="relative bg-stone-900 text-white py-24 lg:py-32 overflow-hidden border-b border-stone-800">
-        <!-- 背景紋理氛圍裝飾 -->
-        <div class="absolute inset-0 opacity-20 pointer-events-none">
-            <div class="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-amber-600 blur-3xl"></div>
-            <div class="absolute -bottom-40 -left-40 w-96 h-96 rounded-full bg-stone-700 blur-3xl"></div>
-        </div>
-
+    <!-- 主視覺 Hero Section -->
+    <section class="relative pt-20 pb-28 overflow-hidden bg-gradient-to-b from-dark-900 via-dark-950 to-dark-950">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="max-w-3xl">
-                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-amber-950/60 border border-amber-800/60 text-amber-300 text-xs font-medium mb-6">
-                    <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
-                    在地經營逾 20 年・專營各類進口國產地材批發零售
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-600/10 border border-brand-600/30 text-brand-600 text-xs font-semibold mb-6">
+                    <span class="w-2 h-2 rounded-full bg-brand-600 animate-pulse"></span>
+                    在地深耕多年・專營各類地材・壁紙・窗簾・地毯整合
                 </div>
-                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-tight font-serif">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight mb-6">
                     每一步踏出的踏實質感，<br>
-                    源自對<span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-amber-400 to-amber-100">地面材料</span>的極致講究。
+                    源自對地面材料的極致講究。
                 </h1>
-                <p class="mt-6 text-base sm:text-lg text-stone-400 leading-relaxed max-w-2xl">
-                    無論是大氣豪邁的石英大板、溫潤質樸的木紋磚、防滑耐磨的 SPC 石塑地板，或是泥作師傅專用厚磚。我們提供最齊全的建材現貨、工班估價支援與完整樣品索取服務。
+                <p class="text-lg text-slate-300 mb-8 leading-relaxed">
+                    宏興專業地板提供 <span class="text-brand-600 font-semibold">塑膠地板、SPC石塑卡扣地板、碳晶超耐磨木地板、精品地磚</span>，以及窗簾、地毯與壁紙整合配置。無論是居家翻新、設計師裝潢或工班大批叫料，均提供最公道價格與專業完工支援。
                 </p>
-                
-                <div class="mt-10 flex flex-wrap gap-4 items-center">
-                    <a href="#catalog" class="px-8 py-3.5 rounded-xl bg-amber-600 hover:bg-amber-500 text-white font-semibold text-sm shadow-lg shadow-amber-950/40 transition-all flex items-center gap-2">
-                        <span>瀏覽產品型錄</span>
-                        <i class="fa-solid fa-arrow-down text-xs"></i>
+                <div class="flex flex-wrap items-center gap-4">
+                    <a href="#catalog" class="bg-brand-600 hover:bg-brand-500 text-white px-6 py-3.5 rounded-lg font-medium transition shadow-lg shadow-brand-600/25 flex items-center gap-2">
+                        瀏覽產品型錄 <i data-lucide="arrow-down" class="w-4 h-4"></i>
                     </a>
-                    <a href="#calculator" class="px-6 py-3.5 rounded-xl bg-stone-800 hover:bg-stone-700 text-stone-200 border border-stone-700 font-medium text-sm transition-all flex items-center gap-2">
-                        <i class="fa-solid fa-calculator text-amber-400"></i>
-                        <span>坪數與片數試算</span>
+                    <a href="#calculator" class="bg-dark-800 hover:bg-slate-800 border border-slate-700 text-slate-200 px-6 py-3.5 rounded-lg font-medium transition flex items-center gap-2">
+                        <i data-lucide="calculator" class="w-4 h-4 text-brand-600"></i> 坪數用料試算
                     </a>
                 </div>
+            </div>
 
-                <!-- 4大核心特點 -->
-                <div class="mt-16 grid grid-cols-2 sm:grid-cols-4 gap-6 pt-10 border-t border-stone-800/80">
-                    <div>
-                        <div class="text-2xl font-bold text-amber-400 font-serif">20+ 年</div>
-                        <div class="text-xs text-stone-400 mt-1">老字號信譽保證</div>
-                    </div>
-                    <div>
-                        <div class="text-2xl font-bold text-amber-400 font-serif">500+ 種</div>
-                        <div class="text-xs text-stone-400 mt-1">磁磚地材現貨在庫</div>
-                    </div>
-                    <div>
-                        <div class="text-2xl font-bold text-amber-400 font-serif">專業估價</div>
-                        <div class="text-xs text-stone-400 mt-1">工班／設計師合作優惠</div>
-                    </div>
-                    <div>
-                        <div class="text-2xl font-bold text-amber-400 font-serif">寄送看樣</div>
-                        <div class="text-xs text-stone-400 mt-1">提供實體樣品確認色差</div>
-                    </div>
+            <!-- 特色亮點卡片 -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16 pt-10 border-t border-slate-800">
+                <div class="p-4 rounded-xl bg-dark-900/60 border border-slate-800">
+                    <div class="text-2xl font-bold text-white mb-1">多樣款式</div>
+                    <div class="text-xs text-slate-400">SPC/塑膠/木地板/窗簾壁紙齊全</div>
+                </div>
+                <div class="p-4 rounded-xl bg-dark-900/60 border border-slate-800">
+                    <div class="text-2xl font-bold text-white mb-1">原廠直營品質</div>
+                    <div class="text-xs text-slate-400">耐磨防水・零甲醛安心材料</div>
+                </div>
+                <div class="p-4 rounded-xl bg-dark-900/60 border border-slate-800">
+                    <div class="text-2xl font-bold text-white mb-1">免費估價</div>
+                    <div class="text-xs text-slate-400">提供到府丈量與工班合作諮詢</div>
+                </div>
+                <div class="p-4 rounded-xl bg-dark-900/60 border border-slate-800">
+                    <div class="text-2xl font-bold text-white mb-1">寄送樣品</div>
+                    <div class="text-xs text-slate-400">提供實體材質手感確認</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 2. 產品型錄展示 (Product Catalog) -->
-    <section id="catalog" class="py-20 bg-stone-100">
+    <!-- 產品型錄 Catalog Section -->
+    <section id="catalog" class="py-20 bg-dark-900/50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-2xl mx-auto mb-12">
-                <span class="text-amber-700 text-xs font-bold tracking-widest uppercase block mb-2">PRODUCT CATALOG</span>
-                <h2 class="text-3xl font-bold text-stone-900 font-serif">地材精選型錄</h2>
-                <p class="mt-3 text-stone-600 text-sm">從居家溫馨生活到商業高流量空間，依照您的空間機能挑選最合適的地材。</p>
-            </div>
-
-            <!-- 分類篩選標籤按鈕 -->
-            <div class="flex flex-wrap justify-center gap-2 mb-10" id="filterContainer">
-                <button onclick="filterProducts('all')" class="filter-btn active px-4 py-2 rounded-full text-xs font-medium transition-all bg-stone-900 text-white shadow-sm" data-category="all">全部地材</button>
-                <button onclick="filterProducts('quartz')" class="filter-btn px-4 py-2 rounded-full text-xs font-medium transition-all bg-white text-stone-600 hover:bg-stone-200" data-category="quartz">拋光／石英磚</button>
-                <button onclick="filterProducts('wood')" class="filter-btn px-4 py-2 rounded-full text-xs font-medium transition-all bg-white text-stone-600 hover:bg-stone-200" data-category="wood">溫潤木紋磚</button>
-                <button onclick="filterProducts('spc')" class="filter-btn px-4 py-2 rounded-full text-xs font-medium transition-all bg-white text-stone-600 hover:bg-stone-200" data-category="spc">SPC 石塑地板</button>
-                <button onclick="filterProducts('pattern')" class="filter-btn px-4 py-2 rounded-full text-xs font-medium transition-all bg-white text-stone-600 hover:bg-stone-200" data-category="pattern">六角磚／風格花磚</button>
-                <button onclick="filterProducts('laminate')" class="filter-btn px-4 py-2 rounded-full text-xs font-medium transition-all bg-white text-stone-600 hover:bg-stone-200" data-category="laminate">超耐磨木地板</button>
-                <button onclick="filterProducts('outdoor')" class="filter-btn px-4 py-2 rounded-full text-xs font-medium transition-all bg-white text-stone-600 hover:bg-stone-200" data-category="outdoor">戶外／車道厚磚 (2cm)</button>
+                <h2 class="text-xs font-bold uppercase tracking-widest text-brand-600 mb-2">PRODUCT CATALOG</h2>
+                <h3 class="text-3xl font-bold text-white mb-4">主營地材與軟裝精選</h3>
+                <p class="text-slate-400 text-sm">提供高質感防潮防水 SPC、經濟耐磨塑膠地磚、溫潤碳晶超耐磨木地板與窗簾壁紙配置。</p>
+                
+                <!-- 分類切換按鈕 -->
+                <div class="flex flex-wrap justify-center gap-2 mt-8" id="filterTabs">
+                    <button onclick="filterProducts('all')" class="tab-btn active px-4 py-2 rounded-full text-xs font-medium bg-brand-600 text-white transition" data-filter="all">全部系列</button>
+                    <button onclick="filterProducts('spc')" class="tab-btn px-4 py-2 rounded-full text-xs font-medium bg-dark-800 text-slate-300 hover:text-white transition" data-filter="spc">SPC石塑卡扣</button>
+                    <button onclick="filterProducts('pvc')" class="tab-btn px-4 py-2 rounded-full text-xs font-medium bg-dark-800 text-slate-300 hover:text-white transition" data-filter="pvc">塑膠地板</button>
+                    <button onclick="filterProducts('wood')" class="tab-btn px-4 py-2 rounded-full text-xs font-medium bg-dark-800 text-slate-300 hover:text-white transition" data-filter="wood">碳晶超耐磨/木地板</button>
+                    <button onclick="filterProducts('tile')" class="tab-btn px-4 py-2 rounded-full text-xs font-medium bg-dark-800 text-slate-300 hover:text-white transition" data-filter="tile">地磚磁磚系列</button>
+                    <button onclick="filterProducts('soft')" class="tab-btn px-4 py-2 rounded-full text-xs font-medium bg-dark-800 text-slate-300 hover:text-white transition" data-filter="soft">窗簾/地毯/壁紙</button>
+                </div>
             </div>
 
             <!-- 產品卡片 Grid -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="productGrid">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="productGrid">
                 
-                <!-- 產品 1 -->
-                <div class="product-card bg-white rounded-2xl overflow-hidden border border-stone-200 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col" data-category="quartz">
-                    <div class="relative h-48 bg-stone-200 overflow-hidden group">
-                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80" alt="卡拉拉白石英磚" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <span class="absolute top-3 left-3 px-2.5 py-1 bg-stone-900/80 backdrop-glass text-white text-[11px] font-semibold rounded-md">石英磚</span>
-                        <span class="absolute top-3 right-3 px-2 py-0.5 bg-amber-500/90 text-white text-[10px] font-semibold rounded">防滑 R9</span>
+                <!-- 卡片 1 -->
+                <div class="product-card bg-dark-900 rounded-xl overflow-hidden border border-slate-800 hover:border-brand-600/50 transition group" data-category="spc">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?auto=format&fit=crop&w=800&q=80" alt="SPC石塑地板" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <span class="absolute top-3 left-3 bg-dark-950/80 backdrop-blur text-xs px-2.5 py-1 rounded-md text-brand-600 font-semibold border border-slate-800">熱銷首推</span>
                     </div>
-                    <div class="p-5 flex-1 flex flex-col justify-between">
-                        <div>
-                            <div class="text-xs text-stone-500 mb-1 flex justify-between">
-                                <span>義大利進口</span>
-                                <span>規格: 60 × 120 cm</span>
-                            </div>
-                            <h3 class="text-base font-bold text-stone-900">大理石紋拋光石英磚 - 卡拉拉白</h3>
-                            <p class="text-xs text-stone-600 mt-2 line-clamp-2">細緻自然結晶紋理，高硬度莫氏7級，抗污易清潔，豪宅客廳大氣首選。</p>
-                        </div>
-                        <div class="mt-4 pt-3 border-t border-stone-100 flex items-center justify-between">
-                            <span class="text-xs font-semibold text-amber-800">工程享批量特惠</span>
-                            <button onclick="askProduct('大理石紋拋光石英磚 - 卡拉拉白 (60x120)')" class="text-xs px-3 py-1.5 rounded-lg bg-stone-900 hover:bg-amber-700 text-white transition-colors">
-                                索取樣品 / 估價
-                            </button>
+                    <div class="p-5">
+                        <div class="text-xs text-slate-400 mb-1">SPC 複合石塑卡扣</div>
+                        <h4 class="text-lg font-bold text-white mb-2">北歐橡木紋 SPC 卡扣地板</h4>
+                        <p class="text-slate-400 text-xs mb-4 line-clamp-2">專利卡扣免上膠、100% 防水防潮、IXPE 靜音減震墊，居家毛小孩、潮濕空間最佳首選。</p>
+                        <div class="flex items-center justify-between pt-3 border-t border-slate-800 text-xs text-slate-300">
+                            <span>規格：6.5mm / 8mm (含降噪墊)</span>
+                            <button onclick="openLineModal('北歐橡木紋 SPC 卡扣地板')" class="text-brand-600 hover:text-brand-500 font-semibold flex items-center gap-1">詢價樣品 <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i></button>
                         </div>
                     </div>
                 </div>
 
-                <!-- 產品 2 -->
-                <div class="product-card bg-white rounded-2xl overflow-hidden border border-stone-200 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col" data-category="wood">
-                    <div class="relative h-48 bg-stone-200 overflow-hidden group">
-                        <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80" alt="橡木紋磚" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <span class="absolute top-3 left-3 px-2.5 py-1 bg-stone-900/80 backdrop-glass text-white text-[11px] font-semibold rounded-md">木紋磚</span>
-                        <span class="absolute top-3 right-3 px-2 py-0.5 bg-emerald-600/90 text-white text-[10px] font-semibold rounded">防滑 R10</span>
+                <!-- 卡片 2 -->
+                <div class="product-card bg-dark-900 rounded-xl overflow-hidden border border-slate-800 hover:border-brand-600/50 transition group" data-category="pvc">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80" alt="商業塑膠地板" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <span class="absolute top-3 left-3 bg-dark-950/80 backdrop-blur text-xs px-2.5 py-1 rounded-md text-emerald-400 font-semibold border border-slate-800">CP值極高</span>
                     </div>
-                    <div class="p-5 flex-1 flex flex-col justify-between">
-                        <div>
-                            <div class="text-xs text-stone-500 mb-1 flex justify-between">
-                                <span>西班牙進口</span>
-                                <span>規格: 20 × 120 cm</span>
-                            </div>
-                            <h3 class="text-base font-bold text-stone-900">北歐自然橡木紋磚</h3>
-                            <p class="text-xs text-stone-600 mt-2 line-clamp-2">還原真木立體觸感與年輪結疤，具備磁磚抗潮不發霉特質，浴室與臥室皆宜。</p>
-                        </div>
-                        <div class="mt-4 pt-3 border-t border-stone-100 flex items-center justify-between">
-                            <span class="text-xs font-semibold text-amber-800">防水耐磨保證</span>
-                            <button onclick="askProduct('北歐自然橡木紋磚 (20x120)')" class="text-xs px-3 py-1.5 rounded-lg bg-stone-900 hover:bg-amber-700 text-white transition-colors">
-                                索取樣品 / 估價
-                            </button>
+                    <div class="p-5">
+                        <div class="text-xs text-slate-400 mb-1">耐磨塑膠地磚</div>
+                        <h4 class="text-lg font-bold text-white mb-2">商業高耐磨木紋塑膠地板</h4>
+                        <p class="text-slate-400 text-xs mb-4 line-clamp-2">超耐磨 UV 層，抗污易清潔，性價比極高，出租套房、辦公室、店面商用鋪設最愛。</p>
+                        <div class="flex items-center justify-between pt-3 border-t border-slate-800 text-xs text-slate-300">
+                            <span>規格：2.0mm / 2.5mm / 3.0mm</span>
+                            <button onclick="openLineModal('商業高耐磨木紋塑膠地板')" class="text-brand-600 hover:text-brand-500 font-semibold flex items-center gap-1">詢價樣品 <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i></button>
                         </div>
                     </div>
                 </div>
 
-                <!-- 產品 3 -->
-                <div class="product-card bg-white rounded-2xl overflow-hidden border border-stone-200 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col" data-category="spc">
-                    <div class="relative h-48 bg-stone-200 overflow-hidden group">
-                        <img src="https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?auto=format&fit=crop&w=600&q=80" alt="SPC石塑地板" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <span class="absolute top-3 left-3 px-2.5 py-1 bg-stone-900/80 backdrop-glass text-white text-[11px] font-semibold rounded-md">SPC石塑</span>
-                        <span class="absolute top-3 right-3 px-2 py-0.5 bg-blue-600/90 text-white text-[10px] font-semibold rounded">IXPE 靜音墊</span>
+                <!-- 卡片 3 -->
+                <div class="product-card bg-dark-900 rounded-xl overflow-hidden border border-slate-800 hover:border-brand-600/50 transition group" data-category="wood">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?auto=format&fit=crop&w=800&q=80" alt="碳晶超耐磨木地板" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <span class="absolute top-3 left-3 bg-dark-950/80 backdrop-blur text-xs px-2.5 py-1 rounded-md text-amber-400 font-semibold border border-slate-800">頂級工藝</span>
                     </div>
-                    <div class="p-5 flex-1 flex flex-col justify-between">
-                        <div>
-                            <div class="text-xs text-stone-500 mb-1 flex justify-between">
-                                <span>台灣製造 MIT</span>
-                                <span>厚度: 6.5 mm (含墊)</span>
-                            </div>
-                            <h3 class="text-base font-bold text-stone-900">卡扣式極致抗污 SPC 石塑地板</h3>
-                            <p class="text-xs text-stone-600 mt-2 line-clamp-2">卡扣安裝免上膠、零甲醛、完全防水防蟲蛀。舊屋翻修與租屋裝潢最高 CP 值。</p>
-                        </div>
-                        <div class="mt-4 pt-3 border-t border-stone-100 flex items-center justify-between">
-                            <span class="text-xs font-semibold text-amber-800">耐磨轉數 30,000</span>
-                            <button onclick="askProduct('卡扣式抗污 SPC 石塑地板 6.5mm')" class="text-xs px-3 py-1.5 rounded-lg bg-stone-900 hover:bg-amber-700 text-white transition-colors">
-                                索取樣品 / 估價
-                            </button>
+                    <div class="p-5">
+                        <div class="text-xs text-slate-400 mb-1">高階複合地材</div>
+                        <h4 class="text-lg font-bold text-white mb-2">碳晶超耐磨木地板</h4>
+                        <p class="text-slate-400 text-xs mb-4 line-clamp-2">融入高科技碳晶元素，抗變形、抗熱脹冷縮能力更上層樓，兼具原木手感與極高抗刮耐磨度。</p>
+                        <div class="flex items-center justify-between pt-3 border-t border-slate-800 text-xs text-slate-300">
+                            <span>特性：高硬度抗刮 / 實木觸感</span>
+                            <button onclick="openLineModal('碳晶超耐磨木地板')" class="text-brand-600 hover:text-brand-500 font-semibold flex items-center gap-1">詢價樣品 <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i></button>
                         </div>
                     </div>
                 </div>
 
-                <!-- 產品 4 -->
-                <div class="product-card bg-white rounded-2xl overflow-hidden border border-stone-200 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col" data-category="pattern">
-                    <div class="relative h-48 bg-stone-200 overflow-hidden group">
-                        <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&q=80" alt="六角蜂巢磚" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <span class="absolute top-3 left-3 px-2.5 py-1 bg-stone-900/80 backdrop-glass text-white text-[11px] font-semibold rounded-md">六角花磚</span>
-                        <span class="absolute top-3 right-3 px-2 py-0.5 bg-emerald-600/90 text-white text-[10px] font-semibold rounded">防滑 R10</span>
+                <!-- 卡片 4 -->
+                <div class="product-card bg-dark-900 rounded-xl overflow-hidden border border-slate-800 hover:border-brand-600/50 transition group" data-category="tile">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="精品大板石英磚" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                     </div>
-                    <div class="p-5 flex-1 flex flex-col justify-between">
-                        <div>
-                            <div class="text-xs text-stone-500 mb-1 flex justify-between">
-                                <span>義大利進口</span>
-                                <span>規格: 20 × 23 cm</span>
-                            </div>
-                            <h3 class="text-base font-bold text-stone-900">幾何莫蘭迪六角蜂巢磚</h3>
-                            <p class="text-xs text-stone-600 mt-2 line-clamp-2">落塵區玄關、乾濕分離浴室主牆、美型咖啡廳首選，混貼能營造極佳空間焦點。</p>
-                        </div>
-                        <div class="mt-4 pt-3 border-t border-stone-100 flex items-center justify-between">
-                            <span class="text-xs font-semibold text-amber-800">多元配色拼貼</span>
-                            <button onclick="askProduct('幾何莫蘭迪六角蜂巢磚')" class="text-xs px-3 py-1.5 rounded-lg bg-stone-900 hover:bg-amber-700 text-white transition-colors">
-                                索取樣品 / 估價
-                            </button>
+                    <div class="p-5">
+                        <div class="text-xs text-slate-400 mb-1">石英地磚系列</div>
+                        <h4 class="text-lg font-bold text-white mb-2">義式大板石英磚 / 拋光磚</h4>
+                        <p class="text-slate-400 text-xs mb-4 line-clamp-2">大器連紋設計，客廳、玄關地面首選，低吸水率、耐重壓，展現頂級豪宅氣勢。</p>
+                        <div class="flex items-center justify-between pt-3 border-t border-slate-800 text-xs text-slate-300">
+                            <span>尺寸：60x60 / 60x120 / 80x80 cm</span>
+                            <button onclick="openLineModal('義式大板石英磚 / 拋光磚')" class="text-brand-600 hover:text-brand-500 font-semibold flex items-center gap-1">詢價樣品 <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i></button>
                         </div>
                     </div>
                 </div>
 
-                <!-- 產品 5 -->
-                <div class="product-card bg-white rounded-2xl overflow-hidden border border-stone-200 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col" data-category="outdoor">
-                    <div class="relative h-48 bg-stone-200 overflow-hidden group">
-                        <img src="https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=format&fit=crop&w=600&q=80" alt="戶外2cm厚磚" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <span class="absolute top-3 left-3 px-2.5 py-1 bg-stone-900/80 backdrop-glass text-white text-[11px] font-semibold rounded-md">戶外厚磚</span>
-                        <span class="absolute top-3 right-3 px-2 py-0.5 bg-red-600/90 text-white text-[10px] font-semibold rounded">防滑 R11</span>
+                <!-- 卡片 5 -->
+                <div class="product-card bg-dark-900 rounded-xl overflow-hidden border border-slate-800 hover:border-brand-600/50 transition group" data-category="soft">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=800&q=80" alt="客製窗簾與壁紙" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                     </div>
-                    <div class="p-5 flex-1 flex flex-col justify-between">
-                        <div>
-                            <div class="text-xs text-stone-500 mb-1 flex justify-between">
-                                <span>國產精選</span>
-                                <span>厚度: 20 mm 實心</span>
-                            </div>
-                            <h3 class="text-base font-bold text-stone-900">車道陽台高承載 2cm 粗砂厚磚</h3>
-                            <p class="text-xs text-stone-600 mt-2 line-clamp-2">抗壓耐重車壓、超高止滑等級，高架地板、庭園造景、車庫斜坡專用。</p>
-                        </div>
-                        <div class="mt-4 pt-3 border-t border-stone-100 flex items-center justify-between">
-                            <span class="text-xs font-semibold text-amber-800">抗折高承重</span>
-                            <button onclick="askProduct('車道陽台高承載 2cm 粗砂厚磚 (60x60)')" class="text-xs px-3 py-1.5 rounded-lg bg-stone-900 hover:bg-amber-700 text-white transition-colors">
-                                索取樣品 / 估價
-                            </button>
+                    <div class="p-5">
+                        <div class="text-xs text-slate-400 mb-1">軟裝整合設計</div>
+                        <h4 class="text-lg font-bold text-white mb-2">客製化窗簾 / 進口壁紙規劃</h4>
+                        <p class="text-slate-400 text-xs mb-4 line-clamp-2">蛇形簾、百葉窗、調光捲簾及各國進口設計壁紙，搭配地面材質一站式整體規劃。</p>
+                        <div class="flex items-center justify-between pt-3 border-t border-slate-800 text-xs text-slate-300">
+                            <span>服務：到府丈量 / 專業安裝</span>
+                            <button onclick="openLineModal('客製化窗簾 / 進口壁紙')" class="text-brand-600 hover:text-brand-500 font-semibold flex items-center gap-1">預約丈量 <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i></button>
                         </div>
                     </div>
                 </div>
 
-                <!-- 產品 6 -->
-                <div class="product-card bg-white rounded-2xl overflow-hidden border border-stone-200 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col" data-category="laminate">
-                    <div class="relative h-48 bg-stone-200 overflow-hidden group">
-                        <img src="https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?auto=format&fit=crop&w=600&q=80" alt="超耐磨木地板" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <span class="absolute top-3 left-3 px-2.5 py-1 bg-stone-900/80 backdrop-glass text-white text-[11px] font-semibold rounded-md">超耐磨</span>
-                        <span class="absolute top-3 right-3 px-2 py-0.5 bg-amber-600/90 text-white text-[10px] font-semibold rounded">AC4 耐磨等級</span>
+                <!-- 卡片 6 -->
+                <div class="product-card bg-dark-900 rounded-xl overflow-hidden border border-slate-800 hover:border-brand-600/50 transition group" data-category="soft">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1579656381226-5fc0f0100c3b?auto=format&fit=crop&w=800&q=80" alt="方塊地毯與滿鋪地毯" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                     </div>
-                    <div class="p-5 flex-1 flex flex-col justify-between">
-                        <div>
-                            <div class="text-xs text-stone-500 mb-1 flex justify-between">
-                                <span>德國進口原裝</span>
-                                <span>規格: 193 × 1380 mm</span>
-                            </div>
-                            <h3 class="text-base font-bold text-stone-900">經典煙燻深橡超耐磨木地板</h3>
-                            <p class="text-xs text-stone-600 mt-2 line-clamp-2">同步壓紋真實木感，四邊倒角立體深邃，適合毛孩家庭與追求踏感溫度的住宅。</p>
-                        </div>
-                        <div class="mt-4 pt-3 border-t border-stone-100 flex items-center justify-between">
-                            <span class="text-xs font-semibold text-amber-800">低甲醛 E1 認證</span>
-                            <button onclick="askProduct('經典煙燻深橡超耐磨木地板')" class="text-xs px-3 py-1.5 rounded-lg bg-stone-900 hover:bg-amber-700 text-white transition-colors">
-                                索取樣品 / 估價
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 產品 7 -->
-                <div class="product-card bg-white rounded-2xl overflow-hidden border border-stone-200 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col" data-category="quartz">
-                    <div class="relative h-48 bg-stone-200 overflow-hidden group">
-                        <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=600&q=80" alt="清水模水泥感石英磚" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <span class="absolute top-3 left-3 px-2.5 py-1 bg-stone-900/80 backdrop-glass text-white text-[11px] font-semibold rounded-md">石英磚</span>
-                        <span class="absolute top-3 right-3 px-2 py-0.5 bg-emerald-600/90 text-white text-[10px] font-semibold rounded">防滑 R10</span>
-                    </div>
-                    <div class="p-5 flex-1 flex flex-col justify-between">
-                        <div>
-                            <div class="text-xs text-stone-500 mb-1 flex justify-between">
-                                <span>國產旗艦</span>
-                                <span>規格: 60 × 60 cm</span>
-                            </div>
-                            <h3 class="text-base font-bold text-stone-900">極簡霧面清水模水泥磚</h3>
-                            <p class="text-xs text-stone-600 mt-2 line-clamp-2">現代工業風與侘寂風首選，抗水漬不反光，適合客廳、走道與衛浴地壁兩用。</p>
-                        </div>
-                        <div class="mt-4 pt-3 border-t border-stone-100 flex items-center justify-between">
-                            <span class="text-xs font-semibold text-amber-800">現貨快速供料</span>
-                            <button onclick="askProduct('極簡霧面清水模水泥磚 60x60')" class="text-xs px-3 py-1.5 rounded-lg bg-stone-900 hover:bg-amber-700 text-white transition-colors">
-                                索取樣品 / 估價
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 產品 8 -->
-                <div class="product-card bg-white rounded-2xl overflow-hidden border border-stone-200 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col" data-category="wood">
-                    <div class="relative h-48 bg-stone-200 overflow-hidden group">
-                        <img src="https://images.unsplash.com/photo-1540518614846-7ede433c4ef9?auto=format&fit=crop&w=600&q=80" alt="人字拼木紋磚" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <span class="absolute top-3 left-3 px-2.5 py-1 bg-stone-900/80 backdrop-glass text-white text-[11px] font-semibold rounded-md">木紋磚</span>
-                        <span class="absolute top-3 right-3 px-2 py-0.5 bg-emerald-600/90 text-white text-[10px] font-semibold rounded">防滑 R10</span>
-                    </div>
-                    <div class="p-5 flex-1 flex flex-col justify-between">
-                        <div>
-                            <div class="text-xs text-stone-500 mb-1 flex justify-between">
-                                <span>義大利進口</span>
-                                <span>規格: 10 × 60 cm</span>
-                            </div>
-                            <h3 class="text-base font-bold text-stone-900">法式人字拼經典柚木磚</h3>
-                            <p class="text-xs text-stone-600 mt-2 line-clamp-2">細緻比例專為人字拼、魚骨拼工法設計，為玄關與客廳營造法式復古優雅韻味。</p>
-                        </div>
-                        <div class="mt-4 pt-3 border-t border-stone-100 flex items-center justify-between">
-                            <span class="text-xs font-semibold text-amber-800">設計師指名款</span>
-                            <button onclick="askProduct('法式人字拼經典柚木磚 (10x60)')" class="text-xs px-3 py-1.5 rounded-lg bg-stone-900 hover:bg-amber-700 text-white transition-colors">
-                                索取樣品 / 估價
-                            </button>
+                    <div class="p-5">
+                        <div class="text-xs text-slate-400 mb-1">地毯系列</div>
+                        <h4 class="text-lg font-bold text-white mb-2">商用方塊地毯 / 居家滿鋪地毯</h4>
+                        <p class="text-slate-400 text-xs mb-4 line-clamp-2">具備防焰標章、耐磨吸音、好替換，適合會議室、飯店走道、影音視聽室與商用辦公。</p>
+                        <div class="flex items-center justify-between pt-3 border-t border-slate-800 text-xs text-slate-300">
+                            <span>認證：防焰認證 / 吸音減噪</span>
+                            <button onclick="openLineModal('商用方塊地毯 / 滿鋪地毯')" class="text-brand-600 hover:text-brand-500 font-semibold flex items-center gap-1">詢價樣品 <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i></button>
                         </div>
                     </div>
                 </div>
@@ -392,514 +284,353 @@
         </div>
     </section>
 
-    <!-- 3. 實景完工案例 (Portfolio) -->
-    <section id="cases" class="py-20 bg-white border-t border-stone-200">
+    <!-- 坪數用量試算機 Section -->
+    <section id="calculator" class="py-20 bg-dark-950 border-t border-b border-slate-800/80">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6">
+            <div class="bg-dark-900 rounded-2xl p-6 sm:p-10 border border-slate-800 shadow-xl">
+                <div class="text-center mb-8">
+                    <span class="text-xs text-brand-600 font-bold uppercase tracking-wider">ESTIMATION TOOL</span>
+                    <h3 class="text-2xl sm:text-3xl font-bold text-white mt-1">施工坪數與材料用量試算</h3>
+                    <p class="text-slate-400 text-sm mt-2">輸入房間長寬或預估坪數，快速幫您估算建議損耗與預估材料箱數/片數！</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-300 mb-2">計算方式</label>
+                        <div class="grid grid-cols-2 gap-2 mb-4">
+                            <button id="calcModePing" onclick="switchCalcMode('ping')" class="py-2 text-xs font-medium rounded-lg bg-brand-600 text-white transition">已知坪數</button>
+                            <button id="calcModeSize" onclick="switchCalcMode('size')" class="py-2 text-xs font-medium rounded-lg bg-dark-800 text-slate-400 transition">量測長寬 (公尺)</button>
+                        </div>
+
+                        <!-- 模式 A: 直接填坪數 -->
+                        <div id="inputPingArea" class="space-y-4">
+                            <div>
+                                <label class="block text-xs text-slate-400 mb-1">欲鋪設坪數</label>
+                                <input type="number" id="calcPingInput" value="12" min="1" class="w-full bg-dark-950 border border-slate-700 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-brand-600">
+                            </div>
+                        </div>
+
+                        <!-- 模式 B: 長寬公尺 -->
+                        <div id="inputSizeArea" class="hidden space-y-4">
+                            <div class="grid grid-cols-2 gap-3">
+                                <div>
+                                    <label class="block text-xs text-slate-400 mb-1">房間長度 (公尺)</label>
+                                    <input type="number" id="calcLength" placeholder="如: 5.5" class="w-full bg-dark-950 border border-slate-700 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-brand-600">
+                                </div>
+                                <div>
+                                    <label class="block text-xs text-slate-400 mb-1">房間寬度 (公尺)</label>
+                                    <input type="number" id="calcWidth" placeholder="如: 4.2" class="w-full bg-dark-950 border border-slate-700 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-brand-600">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 損耗率設定 -->
+                        <div class="mt-4">
+                            <label class="block text-xs text-slate-400 mb-1">建議損耗預留 (裁切/邊角)</label>
+                            <select id="calcLossRate" class="w-full bg-dark-950 border border-slate-700 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-brand-600">
+                                <option value="0.05">一般方正格局（預留 5% 損耗）</option>
+                                <option value="0.08" selected>標準居家/微角多（預留 8% 損耗 - 建議）</option>
+                                <option value="0.10">人字拼 / 斜角格局（預留 10% 損耗）</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- 計算結果顯示卡 -->
+                    <div class="bg-dark-950/70 border border-slate-800 rounded-xl p-5 flex flex-col justify-between">
+                        <div>
+                            <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3">試算預估結果</div>
+                            <div class="space-y-3">
+                                <div class="flex justify-between items-center text-sm">
+                                    <span class="text-slate-400">實際施作面積：</span>
+                                    <span class="text-white font-bold" id="resRealPing">12.0 坪</span>
+                                </div>
+                                <div class="flex justify-between items-center text-sm">
+                                    <span class="text-slate-400">含損耗需備料面積：</span>
+                                    <span class="text-brand-600 font-bold text-lg" id="resTotalPing">13.0 坪</span>
+                                </div>
+                                <div class="pt-3 border-t border-slate-800 text-xs text-slate-400 space-y-1.5">
+                                    <p>• SPC/卡扣地板 (約0.55坪/箱)：約需 <strong class="text-white" id="resBoxCount">24</strong> 箱</p>
+                                    <p>• 60x60 地磚 (約9.1片/坪)：約需 <strong class="text-white" id="resTileCount">119</strong> 片</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-5">
+                            <button onclick="openLineModal('帶入試算坪數諮詢：' + document.getElementById('resTotalPing').innerText)" class="w-full py-2.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold transition flex items-center justify-center gap-1.5 shadow-md shadow-emerald-600/20">
+                                <i data-lucide="send" class="w-3.5 h-3.5"></i> 將此坪數傳送 LINE 專人精準報價
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 完工實景展示 Cases -->
+    <section id="cases" class="py-20 bg-dark-900/40">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
-                <div>
-                    <span class="text-amber-700 text-xs font-bold tracking-widest uppercase block mb-2">PROJECT PORTFOLIO</span>
-                    <h2 class="text-3xl font-bold text-stone-900 font-serif">實景完工案例鑑賞</h2>
-                    <p class="mt-2 text-stone-600 text-sm">好地材看鋪設後的整體空間氛圍，看看其他業主與設計師的精彩落實。</p>
-                </div>
-                <div class="mt-4 md:mt-0">
-                    <span class="text-xs text-stone-500 bg-stone-100 px-3 py-1.5 rounded-full">
-                        <i class="fa-solid fa-camera mr-1 text-amber-600"></i> 每月更新施工完工照片
-                    </span>
-                </div>
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-brand-600 mb-2">OUR PROJECTS</h2>
+                <h3 class="text-3xl font-bold text-white mb-3">現場施工與完工實績</h3>
+                <p class="text-slate-400 text-sm">無論是居家套房改建、商業辦公室、整棟新成屋鋪設，我們重視每道收邊與平整度細節。</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- 案例 1 -->
-                <div class="rounded-2xl overflow-hidden bg-stone-50 border border-stone-200 group">
-                    <div class="relative h-64 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=800&q=80" alt="台中西屯現代輕奢住宅" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-700">
-                        <div class="absolute bottom-3 left-3 bg-stone-900/80 backdrop-glass text-white text-xs px-3 py-1 rounded-md">
-                            客廳公領域・42 坪
-                        </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="rounded-xl overflow-hidden border border-slate-800 bg-dark-900 group">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80" alt="台中西屯客廳SPC石塑地板" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-lg font-bold text-stone-900">台中西屯・現代輕奢住宅</h3>
-                        <p class="text-xs text-amber-700 font-medium mt-1">選用材料：60x120 義大利卡拉拉白拋光石英磚</p>
-                        <p class="text-xs text-stone-600 mt-3 leading-relaxed">
-                            採用大尺寸地磚對花鋪貼，接縫少且大器開闊。經拋光特殊晶化處理，自然光線灑落時呈現高雅鏡面反光。
-                        </p>
+                    <div class="p-5">
+                        <span class="text-xs text-brand-600 font-semibold">台中居家翻新</span>
+                        <h4 class="text-base font-bold text-white mt-1">客廳與走廊・無縫防水 SPC 卡扣地磚</h4>
+                        <p class="text-slate-400 text-xs mt-2">舊磁磚免打除直接直鋪，有效降低施工噪音與粉塵，完工溫潤明亮。</p>
                     </div>
                 </div>
 
-                <!-- 案例 2 -->
-                <div class="rounded-2xl overflow-hidden bg-stone-50 border border-stone-200 group">
-                    <div class="relative h-64 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&w=800&q=80" alt="日式極簡無印宅" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-700">
-                        <div class="absolute bottom-3 left-3 bg-stone-900/80 backdrop-glass text-white text-xs px-3 py-1 rounded-md">
-                            主衛浴全室・4.5 坪
-                        </div>
+                <div class="rounded-xl overflow-hidden border border-slate-800 bg-dark-900 group">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80" alt="商辦高耐磨木紋塑膠地板" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-lg font-bold text-stone-900">竹北高鐵特區・日式湯屋風格衛浴</h3>
-                        <p class="text-xs text-amber-700 font-medium mt-1">選用材料：20x120 橡木紋防滑磚 (R10) + 板岩地磚</p>
-                        <p class="text-xs text-stone-600 mt-3 leading-relaxed">
-                            業主期望保有木質溫馨但又擔心浴室發霉，選用高防滑度木紋磚，長輩小孩赤腳踏入安全又具溫潤踏感。
-                        </p>
+                    <div class="p-5">
+                        <span class="text-xs text-emerald-400 font-semibold">商辦空間規劃</span>
+                        <h4 class="text-base font-bold text-white mt-1">辦公空間・重載耐磨塑膠地板 + 防焰方塊地毯</h4>
+                        <p class="text-slate-400 text-xs mt-2">動線清晰耐磨耐刮，辦公輪椅滑動安靜順暢，整體質感大器專業。</p>
                     </div>
                 </div>
 
-                <!-- 案例 3 -->
-                <div class="rounded-2xl overflow-hidden bg-stone-50 border border-stone-200 group">
-                    <div class="relative h-64 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=800&q=80" alt="獨立咖啡館" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-700">
-                        <div class="absolute bottom-3 left-3 bg-stone-900/80 backdrop-glass text-white text-xs px-3 py-1 rounded-md">
-                            商用咖啡空間・35 坪
-                        </div>
+                <div class="rounded-xl overflow-hidden border border-slate-800 bg-dark-900 group">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80" alt="臥室碳晶超耐磨木地板與窗簾" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-lg font-bold text-stone-900">南投草屯・風格手沖咖啡館</h3>
-                        <p class="text-xs text-amber-700 font-medium mt-1">選用材料：六角水磨石磚 + SPC 卡扣石塑地板</p>
-                        <p class="text-xs text-stone-600 mt-3 leading-relaxed">
-                            吧檯區以六角水磨石磚界定空間，座位區鋪設降噪 IXPE SPC 石塑地板，大幅降低顧客走動與椅子挪移的噪音。
-                        </p>
+                    <div class="p-5">
+                        <span class="text-xs text-amber-400 font-semibold">主臥全室軟裝</span>
+                        <h4 class="text-base font-bold text-white mt-1">碳晶超耐磨木地板 + 落地蛇形遮光簾</h4>
+                        <p class="text-slate-400 text-xs mt-2">木地板與窗簾一體化色調調配，營造溫馨沉穩的頂級飯店睡眠氛圍。</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 4. 坪數用磚試算小工具 (Calculator) -->
-    <section id="calculator" class="py-20 bg-gradient-to-b from-stone-100 to-stone-200 border-t border-stone-300/80">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-white rounded-3xl p-8 sm:p-12 shadow-xl border border-stone-200 relative overflow-hidden">
-                <div class="max-w-xl mx-auto text-center mb-8">
-                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-100 text-amber-800 text-xs font-semibold mb-2">
-                        <i class="fa-solid fa-wrench"></i> 實用估算小工具
-                    </span>
-                    <h2 class="text-2xl sm:text-3xl font-bold text-stone-900 font-serif">空間坪數與磁磚數量試算器</h2>
-                    <p class="mt-2 text-stone-600 text-xs sm:text-sm">
-                        一般施工現場因裁切收邊會有損耗，系統預設已為您加上標準 <span class="text-amber-700 font-bold">10% 耗損備料</span>。
-                    </p>
-                </div>
-
-                <!-- 表單區塊 -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    <div>
-                        <label class="block text-xs font-bold text-stone-700 mb-2">1. 輸入施作面積（坪數）</label>
-                        <div class="relative">
-                            <input type="number" id="areaPing" min="0.1" step="0.5" value="10" class="w-full px-4 py-3 rounded-xl border border-stone-300 focus:outline-none focus:ring-2 focus:ring-amber-500 text-stone-800 text-base font-medium">
-                            <span class="absolute right-4 top-3.5 text-stone-400 text-sm font-medium">坪</span>
-                        </div>
-                        <p class="text-[11px] text-stone-500 mt-1">※ 1 坪約等於 3.305 平方公尺 (㎡)</p>
-                    </div>
-
-                    <div>
-                        <label class="block text-xs font-bold text-stone-700 mb-2">2. 選擇磁磚 / 地板規格尺寸</label>
-                        <select id="tileSpec" class="w-full px-4 py-3 rounded-xl border border-stone-300 focus:outline-none focus:ring-2 focus:ring-amber-500 text-stone-800 text-base font-medium bg-white">
-                            <option value="60x60" data-width="60" data-height="60">60 × 60 cm (最常見客廳大磚)</option>
-                            <option value="60x120" data-width="60" data-height="120">60 × 120 cm (大板石英磚)</option>
-                            <option value="30x60" data-width="30" data-height="60">30 × 60 cm (衛浴壁地專用)</option>
-                            <option value="30x30" data-width="30" data-height="30">30 × 30 cm (經典浴室/陽台)</option>
-                            <option value="20x120" data-width="20" data-height="120">20 × 120 cm (常見木紋磚)</option>
-                            <option value="15x90" data-width="15" data-height="90">15 × 90 cm (細長木紋磚)</option>
-                            <option value="80x80" data-width="80" data-height="80">80 × 80 cm (大器客餐廳)</option>
-                        </select>
-                    </div>
-                </div>
-
-                <!-- 耗損率調節 -->
-                <div class="mt-6 flex items-center justify-between p-3 rounded-xl bg-stone-50 border border-stone-200">
-                    <span class="text-xs font-medium text-stone-700">施工裁切預估損耗率：</span>
-                    <div class="flex gap-2">
-                        <label class="flex items-center gap-1.5 text-xs text-stone-700 cursor-pointer">
-                            <input type="radio" name="wastage" value="0.05" onchange="calculateTiles()" class="text-amber-600 focus:ring-amber-500"> 5% (工整方正)
-                        </label>
-                        <label class="flex items-center gap-1.5 text-xs text-stone-700 cursor-pointer">
-                            <input type="radio" name="wastage" value="0.10" checked onchange="calculateTiles()" class="text-amber-600 focus:ring-amber-500"> 10% (標準推薦)
-                        </label>
-                        <label class="flex items-center gap-1.5 text-xs text-stone-700 cursor-pointer">
-                            <input type="radio" name="wastage" value="0.15" onchange="calculateTiles()" class="text-amber-600 focus:ring-amber-500"> 15% (人字拼/斜貼)
-                        </label>
-                    </div>
-                </div>
-
-                <!-- 試算結果呈現 -->
-                <div class="mt-8 p-6 rounded-2xl bg-stone-900 text-white flex flex-col sm:flex-row items-center justify-between gap-6 shadow-inner">
-                    <div class="text-center sm:text-left">
-                        <div class="text-xs text-stone-400 font-medium">預估建議購買片數 (含損耗)</div>
-                        <div class="mt-1 flex items-baseline justify-center sm:justify-start gap-2">
-                            <span id="resultPieces" class="text-4xl font-extrabold text-amber-400 font-serif">102</span>
-                            <span class="text-sm text-stone-300">片</span>
-                        </div>
-                        <div class="text-xs text-stone-400 mt-1" id="boxEstimate">
-                            約合 26 箱（依單箱4片計）
-                        </div>
-                    </div>
-
-                    <button onclick="sendCalculatedQuote()" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-amber-600 hover:bg-amber-500 text-white font-medium text-xs transition-all flex items-center justify-center gap-2 shadow-lg shadow-amber-950/40">
-                        <i class="fa-brands fa-line text-base"></i>
-                        <span>以此數據向店長諮詢報價</span>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 5. 關於我們與服務優勢 (About Us) -->
-    <section id="about" class="py-20 bg-white">
+    <!-- 關於宏興 About Section -->
+    <section id="about" class="py-20 bg-dark-950">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div>
-                    <span class="text-amber-700 text-xs font-bold tracking-widest uppercase block mb-2">ABOUT YUFENG</span>
-                    <h2 class="text-3xl font-bold text-stone-900 font-serif leading-tight">
-                        在地深耕 20 年的建材信賴，<br>為您省去挑磚踩雷與規格疑慮
-                    </h2>
-                    <p class="mt-4 text-stone-600 text-sm leading-relaxed">
-                        鈺峰地材起步於傳統建材經銷，我們深知地材是裝潢工程中「一旦鋪好就不易更動」的關鍵基石。因此，我們堅持挑選釉面高溫燒製、吸水率低於 0.5% 的石英磚，以及無毒防潮的優質 SPC 卡扣地板。
-                    </p>
-                    <p class="mt-3 text-stone-600 text-sm leading-relaxed">
-                        不僅提供零售批發，我們長年與各大設計公司、統包團隊與泥作老師傅維持緊密合作，隨時提供規格諮詢與施工工法支援。
-                    </p>
-
-                    <!-- 三大保證 -->
-                    <div class="mt-8 space-y-4">
-                        <div class="flex items-start gap-3">
-                            <div class="w-8 h-8 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center flex-shrink-0 text-xs mt-0.5">
-                                <i class="fa-solid fa-check"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-sm font-bold text-stone-900">實體展示門市，看得到摸得到</h4>
-                                <p class="text-xs text-stone-500 mt-0.5">現場備有大型樣品架與實際拼貼觸感展示，杜絕網路螢幕色差。</p>
-                            </div>
+                    <span class="text-xs font-bold uppercase tracking-widest text-brand-600 mb-2 block">ABOUT HONG XING</span>
+                    <h3 class="text-3xl sm:text-4xl font-bold text-white mb-6">嚴選材料，講究品質<br>做最值得您信賴的地材後盾</h3>
+                    <div class="space-y-4 text-slate-300 text-sm leading-relaxed">
+                        <p>
+                            <strong>台中宏興專業地板</strong> 深耕在地，專營各類地面材質（塑膠地磚、SPC石塑卡扣、木地板、地磚）以及室內軟裝（窗簾、地毯、壁紙）的銷售與施工配合。
+                        </p>
+                        <p>
+                            我們深知每塊地磚與地板都承載著一個家庭的生活日常。因此，我們堅持**「不拿劣質混充、重視卡扣與平整細節、價格透明公開」**，無論您是自住裝潢、統包統籌、室內設計師或泥作師傅，宏興皆提供最專業齊全的現貨樣品與親切諮詢！
+                        </p>
+                    </div>
+                    <div class="mt-8 flex flex-wrap gap-4 text-xs font-semibold text-slate-200">
+                        <div class="flex items-center gap-2 bg-dark-900 border border-slate-800 px-3.5 py-2 rounded-lg">
+                            <i data-lucide="check-circle" class="w-4 h-4 text-brand-600"></i> 原廠檢驗合格
                         </div>
-                        <div class="flex items-start gap-3">
-                            <div class="w-8 h-8 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center flex-shrink-0 text-xs mt-0.5">
-                                <i class="fa-solid fa-truck-fast"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-sm font-bold text-stone-900">專車直達配送與吊車上樓調度</h4>
-                                <p class="text-xs text-stone-500 mt-0.5">備妥自家車隊與合作吊車，確保建材準時完整送達工地現場。</p>
-                            </div>
+                        <div class="flex items-center gap-2 bg-dark-900 border border-slate-800 px-3.5 py-2 rounded-lg">
+                            <i data-lucide="check-circle" class="w-4 h-4 text-brand-600"></i> 施工諮詢指導
                         </div>
-                        <div class="flex items-start gap-3">
-                            <div class="w-8 h-8 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center flex-shrink-0 text-xs mt-0.5">
-                                <i class="fa-solid fa-people-carry-box"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-sm font-bold text-stone-900">工班師傅與設計師專屬配合方案</h4>
-                                <p class="text-xs text-stone-500 mt-0.5">長期合作享有工程批發優惠價與預約保留現貨庫存。</p>
-                            </div>
+                        <div class="flex items-center gap-2 bg-dark-900 border border-slate-800 px-3.5 py-2 rounded-lg">
+                            <i data-lucide="check-circle" class="w-4 h-4 text-brand-600"></i> 工班批發大量合作
                         </div>
                     </div>
                 </div>
-
-                <div class="relative">
-                    <div class="rounded-3xl overflow-hidden shadow-2xl border border-stone-200">
-                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=800&q=80" alt="展示門市內部" class="w-full h-[460px] object-cover">
-                    </div>
-                    <div class="absolute -bottom-6 -left-6 bg-stone-900 text-white p-6 rounded-2xl shadow-xl border border-stone-800 hidden sm:block">
-                        <div class="flex items-center gap-4">
-                            <i class="fa-solid fa-handshake text-3xl text-amber-400"></i>
-                            <div>
-                                <div class="text-sm font-bold">歡迎攜帶尺寸圖面</div>
-                                <div class="text-xs text-stone-400 mt-0.5">門市專人為您換算材料與配色建議</div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="rounded-2xl overflow-hidden border border-slate-800 shadow-2xl relative">
+                    <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1000&q=80" alt="宏興地材嚴選" class="w-full h-auto object-cover">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 6. 門市資訊與聯絡諮詢 (Contact) -->
-    <section id="contact" class="py-20 bg-stone-900 text-stone-300 border-t border-stone-800">
+    <!-- 聯絡我們 Contact Section -->
+    <section id="contact" class="py-20 bg-dark-900 border-t border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-2xl mx-auto mb-14">
-                <span class="text-amber-400 text-xs font-bold tracking-widest uppercase block mb-2">CONTACT US</span>
-                <h2 class="text-3xl font-bold text-white font-serif">門市參觀與專案洽詢</h2>
-                <p class="mt-3 text-stone-400 text-sm">歡迎撥打電話、加 LINE 傳送圖面或親臨展示門市現場看樣。</p>
+            <div class="max-w-3xl mx-auto text-center mb-12">
+                <span class="text-xs font-bold uppercase tracking-widest text-brand-600 mb-2 block">CONTACT US</span>
+                <h3 class="text-3xl font-bold text-white mb-3">歡迎諮詢報價・預約索取樣品</h3>
+                <p class="text-slate-400 text-sm">歡迎直接撥打電話、透過 LINE 或 Email 與宏興聯繫，我們將有專人為您服務！</p>
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-                <!-- 聯絡資訊卡片 -->
-                <div class="lg:col-span-5 bg-stone-850 p-8 rounded-3xl border border-stone-800 space-y-6">
-                    <div>
-                        <h3 class="text-lg font-bold text-white mb-4">門市資訊</h3>
-                        <div class="space-y-4 text-xs">
-                            <div class="flex items-start gap-3">
-                                <i class="fa-solid fa-location-dot text-amber-400 text-sm mt-0.5"></i>
-                                <div>
-                                    <span class="text-stone-400 block">門市地址</span>
-                                    <span class="text-stone-200 text-sm font-medium">台中市南屯區五權西路二段 888 號</span>
-                                </div>
-                            </div>
-                            <div class="flex items-start gap-3">
-                                <i class="fa-solid fa-phone text-amber-400 text-sm mt-0.5"></i>
-                                <div>
-                                    <span class="text-stone-400 block">服務專線</span>
-                                    <a href="tel:0423456789" class="text-stone-200 text-sm font-medium hover:text-amber-400 transition-colors">(04) 2345-6789</a>
-                                </div>
-                            </div>
-                            <div class="flex items-start gap-3">
-                                <i class="fa-solid fa-clock text-amber-400 text-sm mt-0.5"></i>
-                                <div>
-                                    <span class="text-stone-400 block">營業時間</span>
-                                    <span class="text-stone-200">週一至週五 08:30 - 18:30</span>
-                                    <span class="text-stone-200 block">週六 09:00 - 17:30 (週日公休)</span>
-                                </div>
-                            </div>
-                        </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                <!-- 電話 -->
+                <a href="tel:0982226991" class="p-6 rounded-xl bg-dark-950 border border-slate-800 text-center hover:border-brand-600/50 transition group">
+                    <div class="w-12 h-12 rounded-full bg-brand-600/10 text-brand-600 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition">
+                        <i data-lucide="phone-call" class="w-6 h-6"></i>
                     </div>
+                    <h4 class="text-base font-bold text-white mb-1">電話諮詢</h4>
+                    <p class="text-brand-600 font-bold text-lg mb-1">0982 226 991</p>
+                    <span class="text-xs text-slate-400">點擊直接通話</span>
+                </a>
 
-                    <div class="pt-6 border-t border-stone-800 space-y-3">
-                        <button onclick="openLineModal()" class="w-full py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs transition-all flex items-center justify-center gap-2 shadow-lg shadow-emerald-950/40">
-                            <i class="fa-brands fa-line text-lg"></i>
-                            <span>加入官方 LINE：@yufeng_tile</span>
-                        </button>
-                        <a href="tel:0423456789" class="w-full py-3 rounded-xl bg-stone-800 hover:bg-stone-700 text-stone-200 font-semibold text-xs transition-all flex items-center justify-center gap-2 border border-stone-700">
-                            <i class="fa-solid fa-phone"></i>
-                            <span>立即撥打電話諮詢</span>
-                        </a>
+                <!-- LINE -->
+                <div onclick="openLineModal()" class="cursor-pointer p-6 rounded-xl bg-dark-950 border border-slate-800 text-center hover:border-emerald-500/50 transition group">
+                    <div class="w-12 h-12 rounded-full bg-emerald-500/10 text-emerald-400 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition">
+                        <i data-lucide="message-circle" class="w-6 h-6"></i>
                     </div>
+                    <h4 class="text-base font-bold text-white mb-1">LINE 官方線上諮詢</h4>
+                    <p class="text-emerald-400 font-bold text-lg mb-1">即時傳照傳圖</p>
+                    <span class="text-xs text-slate-400">點擊開啟加好友方式</span>
                 </div>
 
-                <!-- 線上諮詢表單 -->
-                <div class="lg:col-span-7 bg-stone-850 p-8 rounded-3xl border border-stone-800">
-                    <h3 class="text-lg font-bold text-white mb-2">線上留言與寄送樣品需求</h3>
-                    <p class="text-xs text-stone-400 mb-6">留下您的裝修需求或感興趣的磁磚型號，專人將於 24 小時內與您聯繫。</p>
-
-                    <form id="inquiryForm" onsubmit="handleFormSubmit(event)" class="space-y-4 text-xs">
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            <div>
-                                <label class="block text-stone-400 mb-1.5 font-medium">聯絡人姓名 *</label>
-                                <input type="text" id="clientName" required placeholder="例如：陳先生 / 林設計師" class="w-full px-4 py-2.5 rounded-xl bg-stone-900 border border-stone-700 text-stone-200 focus:outline-none focus:border-amber-500">
-                            </div>
-                            <div>
-                                <label class="block text-stone-400 mb-1.5 font-medium">聯絡電話 / 手機 *</label>
-                                <input type="tel" id="clientPhone" required placeholder="0912-345-678" class="w-full px-4 py-2.5 rounded-xl bg-stone-900 border border-stone-700 text-stone-200 focus:outline-none focus:border-amber-500">
-                            </div>
-                        </div>
-
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            <div>
-                                <label class="block text-stone-400 mb-1.5 font-medium">您的身份</label>
-                                <select id="clientRole" class="w-full px-4 py-2.5 rounded-xl bg-stone-900 border border-stone-700 text-stone-200 focus:outline-none focus:border-amber-500">
-                                    <option>一般自住屋主</option>
-                                    <option>室內設計師 / 建築師</option>
-                                    <option>統包工班 / 泥作師傅</option>
-                                    <option>商業空間店主</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label class="block text-stone-400 mb-1.5 font-medium">需求類型</label>
-                                <select id="inquiryType" class="w-full px-4 py-2.5 rounded-xl bg-stone-900 border border-stone-700 text-stone-200 focus:outline-none focus:border-amber-500">
-                                    <option>索取地材樣品</option>
-                                    <option>預約門市現場看樣</option>
-                                    <option>工程批量報價諮詢</option>
-                                    <option>其他疑難雜症</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div>
-                            <label class="block text-stone-400 mb-1.5 font-medium">需求說明或感興趣的地材款式</label>
-                            <textarea id="clientMessage" rows="3" placeholder="例如：新成屋客廳約 15 坪，想看卡拉拉白石英磚與木紋磚樣品..." class="w-full px-4 py-2.5 rounded-xl bg-stone-900 border border-stone-700 text-stone-200 focus:outline-none focus:border-amber-500"></textarea>
-                        </div>
-
-                        <div id="formSuccessMessage" class="hidden p-3 rounded-lg bg-emerald-950/80 border border-emerald-800 text-emerald-300 text-xs">
-                            <i class="fa-solid fa-check-circle mr-1"></i> 感謝您的詢問！我們已收到您的資訊，專員將盡快回覆您。
-                        </div>
-
-                        <button type="submit" class="w-full py-3 rounded-xl bg-amber-600 hover:bg-amber-500 text-white font-semibold text-xs transition-all shadow-md">
-                            送出諮詢表單
-                        </button>
-                    </form>
-                </div>
+                <!-- 電子郵件 -->
+                <a href="mailto:vivian662@yahoo.com.tw" class="p-6 rounded-xl bg-dark-950 border border-slate-800 text-center hover:border-brand-600/50 transition group">
+                    <div class="w-12 h-12 rounded-full bg-brand-600/10 text-brand-600 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition">
+                        <i data-lucide="mail" class="w-6 h-6"></i>
+                    </div>
+                    <h4 class="text-base font-bold text-white mb-1">電子信箱</h4>
+                    <p class="text-slate-200 text-xs font-medium mb-1 break-all">vivian662@yahoo.com.tw</p>
+                    <span class="text-xs text-slate-400">工程發包／規格需求</span>
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- 頁尾 (Footer) -->
-    <footer class="bg-stone-950 text-stone-500 py-8 border-t border-stone-900 text-xs text-center">
-        <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-4">
-            <div>
-                © 2026 鈺峰地材磁磚選品店 (Yufeng Tile Studio). 版權所有.
-            </div>
-            <div class="flex gap-4">
-                <span>專營石英磚・木紋磚・SPC石塑地板・室外厚磚</span>
-            </div>
+    <!-- 頁尾 Footer -->
+    <footer class="bg-dark-950 border-t border-slate-800 py-10 text-center text-xs text-slate-400">
+        <div class="max-w-7xl mx-auto px-4">
+            <p class="mb-2 text-slate-300 font-semibold">台中宏興專業地板・地材行</p>
+            <p class="mb-4">專營：塑膠地板 / SPC石塑卡扣地板 / 碳晶超耐磨木地板 / 木地板 / 精品地磚 / 窗簾 / 地毯 / 壁紙</p>
+            <p>© <span id="currentYear"></span> 宏興地板. All Rights Reserved.</p>
         </div>
     </footer>
 
-    <!-- LINE QR Code / 快速諮詢彈窗 (Modal) -->
-    <div id="lineModal" class="fixed inset-0 z-50 bg-stone-950/70 backdrop-glass hidden flex items-center justify-center p-4">
-        <div class="bg-white rounded-3xl max-w-sm w-full p-6 text-center shadow-2xl border border-stone-200 relative animate-fade-in">
-            <button onclick="closeLineModal()" class="absolute top-4 right-4 text-stone-400 hover:text-stone-700 p-2">
-                <i class="fa-solid fa-xmark text-lg"></i>
+    <!-- LINE 諮詢彈窗 Modal -->
+    <div id="lineModal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm p-4">
+        <div class="bg-dark-900 border border-slate-800 rounded-2xl max-w-sm w-full p-6 text-center relative shadow-2xl">
+            <button onclick="closeLineModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white">
+                <i data-lucide="x" class="w-5 h-5"></i>
             </button>
-            <div class="w-14 h-14 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto mb-4 text-2xl">
-                <i class="fa-brands fa-line"></i>
+            <div class="w-14 h-14 bg-emerald-500/10 text-emerald-400 rounded-full flex items-center justify-center mx-auto mb-4">
+                <i data-lucide="message-circle" class="w-8 h-8"></i>
             </div>
-            <h3 class="text-lg font-bold text-stone-900">官方 LINE 線上諮詢</h3>
-            <p class="text-xs text-stone-500 mt-1">傳送平面圖、拍照問現貨或索取樣品</p>
-
-            <div class="my-6 p-4 bg-stone-100 rounded-2xl inline-block border border-stone-200">
-                <!-- 示意 QR Code 圖片 -->
-                <img src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=https://line.me" alt="LINE QR Code" class="w-36 h-36 mx-auto rounded-lg">
+            <h3 class="text-lg font-bold text-white mb-1">加入宏興 LINE 諮詢</h3>
+            <p class="text-xs text-slate-300 mb-4" id="lineModalDesc">可透過電話搜尋或點擊下方按鈕加入：</p>
+            
+            <div class="bg-dark-950 p-4 rounded-xl border border-slate-800 mb-4 text-left text-xs space-y-2">
+                <p class="text-slate-300"><span class="text-slate-400">專線電話：</span><strong class="text-white text-sm">0982 226 991</strong></p>
+                <p class="text-slate-300"><span class="text-slate-400">LINE 電話搜尋：</span><span class="text-emerald-400 font-bold">0982226991</span></p>
+                <p class="text-slate-400 text-[11px] leading-relaxed">請在 LINE 中以電話號碼搜尋「0982226991」，或直接來電，我們將立即為您報價！</p>
             </div>
 
-            <div class="space-y-2">
-                <div class="text-xs font-mono text-stone-700 bg-stone-100 py-1.5 px-3 rounded-lg">
-                    LINE ID：<span class="font-bold text-emerald-700">@yufeng_tile</span>
-                </div>
-                <button onclick="copyLineId()" class="w-full py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-medium text-xs transition-all flex items-center justify-center gap-2">
-                    <i class="fa-regular fa-copy"></i>
-                    <span id="copyBtnText">複製 LINE ID</span>
-                </button>
+            <div class="flex gap-2">
+                <a href="tel:0982226991" class="flex-1 py-2.5 rounded-lg bg-brand-600 hover:bg-brand-500 text-white text-xs font-semibold transition">直接撥打電話</a>
+                <button onclick="closeLineModal()" class="flex-1 py-2.5 rounded-lg bg-dark-800 text-slate-300 hover:bg-slate-700 text-xs transition">關閉</button>
             </div>
         </div>
     </div>
 
-    <!-- 浮動聯絡按鈕 (右下角常駐) -->
-    <div class="fixed bottom-6 right-6 z-40 flex flex-col gap-3">
-        <a href="tel:0423456789" class="w-12 h-12 rounded-full bg-stone-900 hover:bg-stone-800 text-amber-400 flex items-center justify-center shadow-lg border border-stone-700 transition-transform hover:scale-105" title="撥打電話">
-            <i class="fa-solid fa-phone text-base"></i>
-        </a>
-        <button onclick="openLineModal()" class="w-12 h-12 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white flex items-center justify-center shadow-lg shadow-emerald-950/30 transition-transform hover:scale-105" title="LINE 諮詢">
-            <i class="fa-brands fa-line text-2xl"></i>
-        </button>
-    </div>
-
-    <!-- JavaScript 互動功能 -->
     <script>
-        // 手機版漢堡選單切換
+        // 初始化 Lucide 圖標
+        lucide.createIcons();
+
+        // 設置當前年份
+        document.getElementById('currentYear').innerText = new Date().getFullYear();
+
+        // 手機選單切換
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
         const mobileMenu = document.getElementById('mobileMenu');
-
-        function toggleMobileMenu() {
+        mobileMenuBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
-        }
-        mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+        });
 
-        // 產品分類過濾篩選
+        // 產品分類過濾
         function filterProducts(category) {
-            // 切換按鈕樣式
-            const buttons = document.querySelectorAll('.filter-btn');
+            const cards = document.querySelectorAll('.product-card');
+            const buttons = document.querySelectorAll('#filterTabs button');
+
             buttons.forEach(btn => {
-                if (btn.dataset.category === category) {
-                    btn.classList.add('bg-stone-900', 'text-white', 'shadow-sm');
-                    btn.classList.remove('bg-white', 'text-stone-600');
+                if (btn.getAttribute('data-filter') === category) {
+                    btn.classList.remove('bg-dark-800', 'text-slate-300');
+                    btn.classList.add('bg-brand-600', 'text-white');
                 } else {
-                    btn.classList.remove('bg-stone-900', 'text-white', 'shadow-sm');
-                    btn.classList.add('bg-white', 'text-stone-600');
+                    btn.classList.remove('bg-brand-600', 'text-white');
+                    btn.classList.add('bg-dark-800', 'text-slate-300');
                 }
             });
 
-            // 過濾卡片顯示
-            const cards = document.querySelectorAll('.product-card');
             cards.forEach(card => {
-                if (category === 'all' || card.dataset.category === category) {
-                    card.style.display = 'flex';
+                const cardCat = card.getAttribute('data-category');
+                if (category === 'all' || cardCat === category) {
+                    card.style.display = 'block';
                 } else {
                     card.style.display = 'none';
                 }
             });
         }
 
-        // 磁磚坪數計算機邏輯
-        const areaPingInput = document.getElementById('areaPing');
-        const tileSpecSelect = document.getElementById('tileSpec');
+        // 坪數計算機邏輯
+        let currentMode = 'ping';
+        const calcPingInput = document.getElementById('calcPingInput');
+        const calcLength = document.getElementById('calcLength');
+        const calcWidth = document.getElementById('calcWidth');
+        const calcLossRate = document.getElementById('calcLossRate');
 
-        function calculateTiles() {
-            const ping = parseFloat(areaPingInput.value) || 0;
-            if (ping <= 0) {
-                document.getElementById('resultPieces').textContent = '0';
-                document.getElementById('boxEstimate').textContent = '請輸入有效坪數';
-                return;
+        function switchCalcMode(mode) {
+            currentMode = mode;
+            const btnPing = document.getElementById('calcModePing');
+            const btnSize = document.getElementById('calcModeSize');
+            const areaPing = document.getElementById('inputPingArea');
+            const areaSize = document.getElementById('inputSizeArea');
+
+            if (mode === 'ping') {
+                btnPing.className = 'py-2 text-xs font-medium rounded-lg bg-brand-600 text-white transition';
+                btnSize.className = 'py-2 text-xs font-medium rounded-lg bg-dark-800 text-slate-400 transition';
+                areaPing.classList.remove('hidden');
+                areaSize.classList.add('hidden');
+            } else {
+                btnSize.className = 'py-2 text-xs font-medium rounded-lg bg-brand-600 text-white transition';
+                btnPing.className = 'py-2 text-xs font-medium rounded-lg bg-dark-800 text-slate-400 transition';
+                areaSize.classList.remove('hidden');
+                areaPing.classList.add('hidden');
+            }
+            updateCalc();
+        }
+
+        function updateCalc() {
+            let realPing = 0;
+            if (currentMode === 'ping') {
+                realPing = parseFloat(calcPingInput.value) || 0;
+            } else {
+                const len = parseFloat(calcLength.value) || 0;
+                const wid = parseFloat(calcWidth.value) || 0;
+                realPing = (len * wid) * 0.3025;
             }
 
-            // 1 坪 = 3.305785 平方公尺 = 33057.85 平方公分
-            const pingInSqCm = 33057.85;
-            const totalAreaSqCm = ping * pingInSqCm;
+            const loss = parseFloat(calcLossRate.value) || 0.08;
+            const totalPing = realPing * (1 + loss);
 
-            // 取得選取磁磚長寬 (公分)
-            const selectedOption = tileSpecSelect.options[tileSpecSelect.selectedIndex];
-            const width = parseFloat(selectedOption.getAttribute('data-width'));
-            const height = parseFloat(selectedOption.getAttribute('data-height'));
-            const singleTileArea = width * height;
+            document.getElementById('resRealPing').innerText = realPing.toFixed(1) + ' 坪';
+            document.getElementById('resTotalPing').innerText = totalPing.toFixed(1) + ' 坪';
 
-            // 取得損耗率 (5%, 10%, 15%)
-            const wastageRate = parseFloat(document.querySelector('input[name="wastage"]:checked').value);
+            // 預估箱數與片數
+            const boxes = Math.ceil(totalPing / 0.55);
+            const tiles = Math.ceil(totalPing * 9.1);
 
-            // 計算片數並無條件進位
-            const basePieces = totalAreaSqCm / singleTileArea;
-            const totalPiecesWithWastage = Math.ceil(basePieces * (1 + wastageRate));
-
-            // 試算預估箱數 (常見大磚一箱約 3~4 片)
-            const piecesPerBox = (width >= 60 && height >= 60) ? 4 : 8;
-            const boxes = Math.ceil(totalPiecesWithWastage / piecesPerBox);
-
-            document.getElementById('resultPieces').textContent = totalPiecesWithWastage;
-            document.getElementById('boxEstimate').textContent = `約合 ${boxes} 箱 (以每箱 ${piecesPerBox} 片規格估計)`;
+            document.getElementById('resBoxCount').innerText = isNaN(boxes) ? 0 : boxes;
+            document.getElementById('resTileCount').innerText = isNaN(tiles) ? 0 : tiles;
         }
 
-        areaPingInput.addEventListener('input', calculateTiles);
-        tileSpecSelect.addEventListener('change', calculateTiles);
-        // 初始化計算一次
-        calculateTiles();
+        calcPingInput.addEventListener('input', updateCalc);
+        calcLength.addEventListener('input', updateCalc);
+        calcWidth.addEventListener('input', updateCalc);
+        calcLossRate.addEventListener('change', updateCalc);
 
-        // 點擊產品索取樣品快速帶入
-        function askProduct(productName) {
-            const messageBox = document.getElementById('clientMessage');
-            messageBox.value = `您好，我對【${productName}】很感興趣，希望能索取樣品或了解連工帶料行情。`;
-            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
-            messageBox.focus();
+        // LINE 諮詢彈窗
+        function openLineModal(customText) {
+            const desc = document.getElementById('lineModalDesc');
+            if (customText) {
+                desc.innerText = '想諮詢品項：' + customText;
+            } else {
+                desc.innerText = '可透過電話搜尋或直接來電聯繫：';
+            }
+            document.getElementById('lineModal').classList.remove('hidden');
         }
 
-        // 以試算結果諮詢
-        function sendCalculatedQuote() {
-            const ping = areaPingInput.value;
-            const spec = tileSpecSelect.options[tileSpecSelect.selectedIndex].text;
-            const pieces = document.getElementById('resultPieces').textContent;
-
-            const messageBox = document.getElementById('clientMessage');
-            messageBox.value = `您好，我剛剛透過網站試算：施作面積約 ${ping} 坪，選用規格為【${spec}】，預估數量約 ${pieces} 片，希望能請教報價及推薦工班配合細節。`;
-            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
-            messageBox.focus();
-        }
-
-        // 表單提交處理 (模擬)
-        function handleFormSubmit(e) {
-            e.preventDefault();
-            const successDiv = document.getElementById('formSuccessMessage');
-            successDiv.classList.remove('hidden');
-            setTimeout(() => {
-                document.getElementById('inquiryForm').reset();
-            }, 1000);
-        }
-
-        // LINE 彈窗開關與複製
-        const lineModal = document.getElementById('lineModal');
-        function openLineModal() {
-            lineModal.classList.remove('hidden');
-        }
         function closeLineModal() {
-            lineModal.classList.add('hidden');
-        }
-        lineModal.addEventListener('click', function(e) {
-            if (e.target === lineModal) closeLineModal();
-        });
-
-        function copyLineId() {
-            const lineId = "@yufeng_tile";
-            // 複製到剪貼簿相容寫法
-            const tempInput = document.createElement("input");
-            tempInput.value = lineId;
-            document.body.appendChild(tempInput);
-            tempInput.select();
-            document.execCommand("copy");
-            document.body.removeChild(tempInput);
-
-            const btnText = document.getElementById('copyBtnText');
-            btnText.textContent = "已複製 ID！";
-            setTimeout(() => {
-                btnText.textContent = "複製 LINE ID";
-            }, 2000);
+            document.getElementById('lineModal').classList.add('hidden');
         }
     </script>
 </body>
