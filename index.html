@@ -81,7 +81,7 @@
             <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
                 <a href="#about" class="hover:text-brand-600 transition">關於宏興</a>
                 <a href="#catalog" class="hover:text-brand-600 transition">材料型錄</a>
-                <a href="#calculator" class="hover:text-brand-600 transition">坪數用料試算</a>
+                <a href="#calculator" class="hover:text-brand-600 transition">用量試算</a>
                 <a href="#cases" class="hover:text-brand-600 transition">完工實景</a>
                 <a href="#contact" class="hover:text-brand-600 transition">聯絡諮詢</a>
             </nav>
@@ -103,7 +103,7 @@
         <div id="mobileMenu" class="hidden md:hidden bg-dark-900 border-b border-slate-800 px-4 py-5 space-y-3">
             <a href="#about" class="block text-slate-300 hover:text-brand-600 py-1">關於宏興</a>
             <a href="#catalog" class="block text-slate-300 hover:text-brand-600 py-1">材料型錄</a>
-            <a href="#calculator" class="block text-slate-300 hover:text-brand-600 py-1">坪數用料試算</a>
+            <a href="#calculator" class="block text-slate-300 hover:text-brand-600 py-1">用量試算</a>
             <a href="#cases" class="block text-slate-300 hover:text-brand-600 py-1">完工實景</a>
             <a href="#contact" class="block text-slate-300 hover:text-brand-600 py-1">聯絡諮詢</a>
             <button onclick="openLineModal()" class="w-full mt-2 flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-2.5 rounded-lg text-sm font-medium transition">
@@ -132,7 +132,7 @@
                         瀏覽產品型錄 <i data-lucide="arrow-down" class="w-4 h-4"></i>
                     </a>
                     <a href="#calculator" class="bg-dark-800 hover:bg-slate-800 border border-slate-700 text-slate-200 px-6 py-3.5 rounded-lg font-medium transition flex items-center gap-2">
-                        <i data-lucide="calculator" class="w-4 h-4 text-brand-600"></i> 坪數用料試算
+                        <i data-lucide="calculator" class="w-4 h-4 text-brand-600"></i> 用量快速試算
                     </a>
                 </div>
             </div>
@@ -149,7 +149,7 @@
                 </div>
                 <div class="p-4 rounded-xl bg-dark-900/60 border border-slate-800">
                     <div class="text-2xl font-bold text-white mb-1">免費估價</div>
-                    <div class="text-xs text-slate-400">提供到府丈量與工班合作諮詢</div>
+                    <div class="text-xs text-slate-400">提供現場丈量與工班配合諮詢</div>
                 </div>
                 <div class="p-4 rounded-xl bg-dark-900/60 border border-slate-800">
                     <div class="text-2xl font-bold text-white mb-1">寄送樣品</div>
@@ -284,78 +284,63 @@
         </div>
     </section>
 
-    <!-- 坪數用量試算機 Section -->
+    <!-- 坪數用量試算機 Section（已優化：純長寬測量，只留建議叫料坪數與箱數） -->
     <section id="calculator" class="py-20 bg-dark-950 border-t border-b border-slate-800/80">
         <div class="max-w-4xl mx-auto px-4 sm:px-6">
             <div class="bg-dark-900 rounded-2xl p-6 sm:p-10 border border-slate-800 shadow-xl">
                 <div class="text-center mb-8">
                     <span class="text-xs text-brand-600 font-bold uppercase tracking-wider">ESTIMATION TOOL</span>
-                    <h3 class="text-2xl sm:text-3xl font-bold text-white mt-1">施工坪數與材料用量試算</h3>
-                    <p class="text-slate-400 text-sm mt-2">輸入房間長寬或預估坪數，快速幫您估算建議損耗與預估材料箱數/片數！</p>
+                    <h3 class="text-2xl sm:text-3xl font-bold text-white mt-1">施工空間與材料用量試算</h3>
+                    <p class="text-slate-400 text-sm mt-2">拿捲尺測量空間長寬，快速為您算出建議備料坪數與叫料箱數！</p>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                        <label class="block text-xs font-semibold text-slate-300 mb-2">計算方式</label>
-                        <div class="grid grid-cols-2 gap-2 mb-4">
-                            <button id="calcModePing" onclick="switchCalcMode('ping')" class="py-2 text-xs font-medium rounded-lg bg-brand-600 text-white transition">已知坪數</button>
-                            <button id="calcModeSize" onclick="switchCalcMode('size')" class="py-2 text-xs font-medium rounded-lg bg-dark-800 text-slate-400 transition">量測長寬 (公尺)</button>
-                        </div>
-
-                        <!-- 模式 A: 直接填坪數 -->
-                        <div id="inputPingArea" class="space-y-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+                    <div class="space-y-4">
+                        <div class="grid grid-cols-2 gap-3">
                             <div>
-                                <label class="block text-xs text-slate-400 mb-1">欲鋪設坪數</label>
-                                <input type="number" id="calcPingInput" value="12" min="1" class="w-full bg-dark-950 border border-slate-700 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-brand-600">
+                                <label class="block text-xs text-slate-300 font-medium mb-1.5">空間長度 (公尺 m)</label>
+                                <input type="number" id="calcLength" value="5.5" step="0.1" min="0.1" placeholder="例如: 5.5" class="w-full bg-dark-950 border border-slate-700 rounded-lg px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-brand-600 transition">
                             </div>
-                        </div>
-
-                        <!-- 模式 B: 長寬公尺 -->
-                        <div id="inputSizeArea" class="hidden space-y-4">
-                            <div class="grid grid-cols-2 gap-3">
-                                <div>
-                                    <label class="block text-xs text-slate-400 mb-1">房間長度 (公尺)</label>
-                                    <input type="number" id="calcLength" placeholder="如: 5.5" class="w-full bg-dark-950 border border-slate-700 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-brand-600">
-                                </div>
-                                <div>
-                                    <label class="block text-xs text-slate-400 mb-1">房間寬度 (公尺)</label>
-                                    <input type="number" id="calcWidth" placeholder="如: 4.2" class="w-full bg-dark-950 border border-slate-700 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-brand-600">
-                                </div>
+                            <div>
+                                <label class="block text-xs text-slate-300 font-medium mb-1.5">空間寬度 (公尺 m)</label>
+                                <input type="number" id="calcWidth" value="4.2" step="0.1" min="0.1" placeholder="例如: 4.2" class="w-full bg-dark-950 border border-slate-700 rounded-lg px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-brand-600 transition">
                             </div>
                         </div>
 
                         <!-- 損耗率設定 -->
-                        <div class="mt-4">
-                            <label class="block text-xs text-slate-400 mb-1">建議損耗預留 (裁切/邊角)</label>
-                            <select id="calcLossRate" class="w-full bg-dark-950 border border-slate-700 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-brand-600">
+                        <div>
+                            <label class="block text-xs text-slate-300 font-medium mb-1.5">空間格局損耗預留</label>
+                            <select id="calcLossRate" class="w-full bg-dark-950 border border-slate-700 rounded-lg px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-brand-600 transition">
                                 <option value="0.05">一般方正格局（預留 5% 損耗）</option>
-                                <option value="0.08" selected>標準居家/微角多（預留 8% 損耗 - 建議）</option>
-                                <option value="0.10">人字拼 / 斜角格局（預留 10% 損耗）</option>
+                                <option value="0.08" selected>標準居家／邊角微多（預留 8% 損耗 - 推薦）</option>
+                                <option value="0.10">斜角多／人字拼施作（預留 10% 損耗）</option>
                             </select>
                         </div>
                     </div>
 
                     <!-- 計算結果顯示卡 -->
-                    <div class="bg-dark-950/70 border border-slate-800 rounded-xl p-5 flex flex-col justify-between">
+                    <div class="bg-dark-950/80 border border-slate-800 rounded-xl p-6 flex flex-col justify-between h-full">
                         <div>
-                            <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3">試算預估結果</div>
-                            <div class="space-y-3">
-                                <div class="flex justify-between items-center text-sm">
-                                    <span class="text-slate-400">實際施作面積：</span>
-                                    <span class="text-white font-bold" id="resRealPing">12.0 坪</span>
-                                </div>
-                                <div class="flex justify-between items-center text-sm">
-                                    <span class="text-slate-400">含損耗需備料面積：</span>
-                                    <span class="text-brand-600 font-bold text-lg" id="resTotalPing">13.0 坪</span>
-                                </div>
-                                <div class="pt-3 border-t border-slate-800 text-xs text-slate-400 space-y-1.5">
-                                    <p>• SPC/卡扣地板 (約0.55坪/箱)：約需 <strong class="text-white" id="resBoxCount">24</strong> 箱</p>
-                                    <p>• 60x60 地磚 (約9.1片/坪)：約需 <strong class="text-white" id="resTileCount">119</strong> 片</p>
+                            <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">建議備料試算結果</div>
+                            <div class="py-2">
+                                <span class="text-xs text-slate-400 block mb-1">建議叫料坪數 (已計入損耗)：</span>
+                                <div class="flex items-baseline gap-2">
+                                    <span class="text-brand-600 font-extrabold text-3xl sm:text-4xl" id="resTotalPing">7.6 坪</span>
                                 </div>
                             </div>
+                            <div class="pt-4 mt-2 border-t border-slate-800/80 text-xs text-slate-300 space-y-2">
+                                <p class="flex justify-between items-center">
+                                    <span class="text-slate-400">• SPC卡扣 / 塑膠地板 (約0.55坪/箱)：</span>
+                                    <strong class="text-white text-sm" id="resBoxCount">14 箱</strong>
+                                </p>
+                                <p class="flex justify-between items-center">
+                                    <span class="text-slate-400">• 60x60 地磚 (約9.1片/坪)：</span>
+                                    <strong class="text-white text-sm" id="resTileCount">70 片</strong>
+                                </p>
+                            </div>
                         </div>
-                        <div class="mt-5">
-                            <button onclick="openLineModal('帶入試算坪數諮詢：' + document.getElementById('resTotalPing').innerText)" class="w-full py-2.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold transition flex items-center justify-center gap-1.5 shadow-md shadow-emerald-600/20">
+                        <div class="mt-6">
+                            <button onclick="openLineModal('帶入試算備料坪數諮詢：' + document.getElementById('resTotalPing').innerText)" class="w-full py-3 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold transition flex items-center justify-center gap-1.5 shadow-md shadow-emerald-600/20 active:scale-95">
                                 <i data-lucide="send" class="w-3.5 h-3.5"></i> 將此坪數傳送 LINE 專人精準報價
                             </button>
                         </div>
@@ -423,7 +408,7 @@
                             <strong>台中宏興專業地板</strong> 深耕在地，專營各類地面材質（塑膠地磚、SPC石塑卡扣、木地板、地磚）以及室內軟裝（窗簾、地毯、壁紙）的銷售與施工配合。
                         </p>
                         <p>
-                            我們深知每塊地磚與地板都承載著一個家庭的生活日常。因此，我們堅持**「不拿劣質混充、重視卡扣與平整細節、價格透明公開」**，無論您是自住裝潢、統包統籌、室內設計師或泥作師傅，宏興皆提供最專業齊全的現貨樣品與親切諮詢！
+                            我們深知每塊地磚與地板都承載著一個家庭的生活日常。因此，我們堅持「不拿劣質混充、重視卡扣與平整細節、價格透明公開」，無論您是自住裝潢、統包統籌、室內設計師或泥作師傅，宏興皆提供最專業齊全的現貨樣品與親切諮詢！
                         </p>
                     </div>
                     <div class="mt-8 flex flex-wrap gap-4 text-xs font-semibold text-slate-200">
@@ -507,7 +492,7 @@
                 <i data-lucide="message-circle" class="w-8 h-8"></i>
             </div>
             <h3 class="text-lg font-bold text-white mb-1">加入宏興 LINE 諮詢</h3>
-            <p class="text-xs text-slate-300 mb-4" id="lineModalDesc">可透過電話搜尋或點擊下方按鈕加入：</p>
+            <p class="text-xs text-slate-300 mb-4" id="lineModalDesc">可透過電話搜尋或直接來電聯繫：</p>
             
             <div class="bg-dark-950 p-4 rounded-xl border border-slate-800 mb-4 text-left text-xs space-y-2">
                 <p class="text-slate-300"><span class="text-slate-400">專線電話：</span><strong class="text-white text-sm">0982 226 991</strong></p>
@@ -561,62 +546,34 @@
             });
         }
 
-        // 坪數計算機邏輯
-        let currentMode = 'ping';
-        const calcPingInput = document.getElementById('calcPingInput');
+        // 坪數計算機邏輯（純長寬測量）
         const calcLength = document.getElementById('calcLength');
         const calcWidth = document.getElementById('calcWidth');
         const calcLossRate = document.getElementById('calcLossRate');
 
-        function switchCalcMode(mode) {
-            currentMode = mode;
-            const btnPing = document.getElementById('calcModePing');
-            const btnSize = document.getElementById('calcModeSize');
-            const areaPing = document.getElementById('inputPingArea');
-            const areaSize = document.getElementById('inputSizeArea');
-
-            if (mode === 'ping') {
-                btnPing.className = 'py-2 text-xs font-medium rounded-lg bg-brand-600 text-white transition';
-                btnSize.className = 'py-2 text-xs font-medium rounded-lg bg-dark-800 text-slate-400 transition';
-                areaPing.classList.remove('hidden');
-                areaSize.classList.add('hidden');
-            } else {
-                btnSize.className = 'py-2 text-xs font-medium rounded-lg bg-brand-600 text-white transition';
-                btnPing.className = 'py-2 text-xs font-medium rounded-lg bg-dark-800 text-slate-400 transition';
-                areaSize.classList.remove('hidden');
-                areaPing.classList.add('hidden');
-            }
-            updateCalc();
-        }
-
         function updateCalc() {
-            let realPing = 0;
-            if (currentMode === 'ping') {
-                realPing = parseFloat(calcPingInput.value) || 0;
-            } else {
-                const len = parseFloat(calcLength.value) || 0;
-                const wid = parseFloat(calcWidth.value) || 0;
-                realPing = (len * wid) * 0.3025;
-            }
-
+            const len = parseFloat(calcLength.value) || 0;
+            const wid = parseFloat(calcWidth.value) || 0;
+            const realPing = (len * wid) * 0.3025;
             const loss = parseFloat(calcLossRate.value) || 0.08;
             const totalPing = realPing * (1 + loss);
 
-            document.getElementById('resRealPing').innerText = realPing.toFixed(1) + ' 坪';
             document.getElementById('resTotalPing').innerText = totalPing.toFixed(1) + ' 坪';
 
             // 預估箱數與片數
             const boxes = Math.ceil(totalPing / 0.55);
             const tiles = Math.ceil(totalPing * 9.1);
 
-            document.getElementById('resBoxCount').innerText = isNaN(boxes) ? 0 : boxes;
-            document.getElementById('resTileCount').innerText = isNaN(tiles) ? 0 : tiles;
+            document.getElementById('resBoxCount').innerText = isNaN(boxes) ? '0 箱' : boxes + ' 箱';
+            document.getElementById('resTileCount').innerText = isNaN(tiles) ? '0 片' : tiles + ' 片';
         }
 
-        calcPingInput.addEventListener('input', updateCalc);
         calcLength.addEventListener('input', updateCalc);
         calcWidth.addEventListener('input', updateCalc);
         calcLossRate.addEventListener('change', updateCalc);
+
+        // 初始化先執行一次
+        updateCalc();
 
         // LINE 諮詢彈窗
         function openLineModal(customText) {
