@@ -52,14 +52,27 @@
                     <i data-lucide="clock" class="w-3.5 h-3.5 text-slate-400"></i> 週一至週六 08:30 - 18:30
                 </span>
             </div>
-            <div class="flex items-center gap-4">
+            
+            <div class="flex items-center gap-4 flex-wrap justify-center">
                 <a href="tel:0982226991" class="hover:text-white flex items-center gap-1 transition">
                     <i data-lucide="phone-call" class="w-3.5 h-3.5 text-brand-600"></i> 0982 226 991
                 </a>
                 <span class="text-slate-600">|</span>
-                <a href="mailto:vivian662@yahoo.com.tw" class="hover:text-white flex items-center gap-1 transition">
-                    <i data-lucide="mail" class="w-3.5 h-3.5 text-slate-400"></i> vivian662@yahoo.com.tw
-                </a>
+                <!-- 社群連結按鈕群 -->
+                <div class="flex items-center gap-3">
+                    <a href="https://www.facebook.com/people/%E5%8F%B0%E4%B8%AD%E5%AE%8F%E8%88%88%E5%B0%88%E6%A5%AD%E5%9C%B0%E6%9D%BF-%E5%A1%91%E8%86%A0%E5%9C%B0%E6%9D%BFspc%E7%9F%B3%E5%A1%91%E5%8D%A1%E6%89%A3%E5%9C%B0%E6%9D%BF%E7%AA%97%E7%B0%BE%E5%9C%B0%E6%AF%AF%E5%A3%81%E7%B4%99%E6%9C%A8%E5%9C%B0%E6%9D%BF%E7%A2%B3%E6%99%B6%E8%B6%85%E8%80%90%E7%A3%A8%E6%9C%A8%E5%9C%B0%E6%9D%BF/100086376579466" target="_blank" rel="noopener noreferrer" class="hover:text-blue-400 flex items-center gap-1 transition" title="宏興 Facebook 粉絲專頁">
+                        <i data-lucide="facebook" class="w-3.5 h-3.5"></i>
+                        <span>FB</span>
+                    </a>
+                    <a href="https://www.instagram.com/hongxing_chou/?hl=zh-tw" target="_blank" rel="noopener noreferrer" class="hover:text-pink-400 flex items-center gap-1 transition" title="宏興 Instagram">
+                        <i data-lucide="instagram" class="w-3.5 h-3.5"></i>
+                        <span>IG</span>
+                    </a>
+                    <a href="https://www.threads.net/@hong_xing2025" target="_blank" rel="noopener noreferrer" class="hover:text-white flex items-center gap-1 transition" title="宏興 Threads">
+                        <i data-lucide="at-sign" class="w-3.5 h-3.5"></i>
+                        <span>Threads</span>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
@@ -78,7 +91,7 @@
             </a>
 
             <!-- 桌機選單 -->
-            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+            <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-300">
                 <a href="#about" class="hover:text-brand-600 transition">關於宏興</a>
                 <a href="#catalog" class="hover:text-brand-600 transition">材料型錄</a>
                 <a href="#calculator" class="hover:text-brand-600 transition">用量試算</a>
@@ -89,7 +102,7 @@
             <div class="hidden md:flex items-center gap-3">
                 <button onclick="openLineModal()" class="flex items-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-2.5 rounded-lg text-sm font-medium transition shadow-lg shadow-emerald-600/20 active:scale-95">
                     <i data-lucide="message-circle" class="w-4 h-4"></i>
-                    加入官方 LINE 諮詢
+                    加入 LINE 諮詢
                 </button>
             </div>
 
@@ -106,8 +119,13 @@
             <a href="#calculator" class="block text-slate-300 hover:text-brand-600 py-1">用量試算</a>
             <a href="#cases" class="block text-slate-300 hover:text-brand-600 py-1">完工實景</a>
             <a href="#contact" class="block text-slate-300 hover:text-brand-600 py-1">聯絡諮詢</a>
+            <div class="pt-3 border-t border-slate-800 flex gap-4">
+                <a href="https://www.facebook.com/people/%E5%8F%B0%E4%B8%AD%E5%AE%8F%E8%88%88%E5%B0%88%E6%A5%AD%E5%9C%B0%E6%9D%BF-%E5%A1%91%E8%86%A0%E5%9C%B0%E6%9D%BFspc%E7%9F%B3%E5%A1%91%E5%8D%A1%E6%89%A3%E5%9C%B0%E6%9D%BF%E7%AA%97%E7%B0%BE%E5%9C%B0%E6%AF%AF%E5%A3%81%E7%B4%99%E6%9C%A8%E5%9C%B0%E6%9D%BF%E7%A2%B3%E6%99%B6%E8%B6%85%E8%80%90%E7%A3%A8%E6%9C%A8%E5%9C%B0%E6%9D%BF/100086376579466" target="_blank" class="text-blue-400 text-xs flex items-center gap-1">Facebook</a>
+                <a href="https://www.instagram.com/hongxing_chou/?hl=zh-tw" target="_blank" class="text-pink-400 text-xs flex items-center gap-1">Instagram</a>
+                <a href="https://www.threads.net/@hong_xing2025" target="_blank" class="text-slate-300 text-xs flex items-center gap-1">Threads</a>
+            </div>
             <button onclick="openLineModal()" class="w-full mt-2 flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-2.5 rounded-lg text-sm font-medium transition">
-                <i data-lucide="message-circle" class="w-4 h-4"></i> 加入官方 LINE 諮詢
+                <i data-lucide="message-circle" class="w-4 h-4"></i> 加入 LINE 諮詢
             </button>
         </div>
     </header>
@@ -125,7 +143,7 @@
                     源自對地面材料的極致講究。
                 </h1>
                 <p class="text-lg text-slate-300 mb-8 leading-relaxed">
-                    宏興專業地板提供 <span class="text-brand-600 font-semibold">塑膠地板、SPC石塑卡扣地板、碳晶超耐磨木地板、精品地磚</span>，以及窗簾、地毯與壁紙整合配置。無論是居家翻新、設計師裝潢或工班大批叫料，均提供最公道價格與專業完工支援。
+                    宏興專業地板提供 <span class="text-brand-600 font-semibold">塑膠地板、SPC石塑卡扣地板、碳晶超耐磨木地板、精品地磚</span>，以及窗簾、地毯與壁紙整合配置。歡迎追蹤我們的社群觀看每日最新施工實績！
                 </p>
                 <div class="flex flex-wrap items-center gap-4">
                     <a href="#catalog" class="bg-brand-600 hover:bg-brand-500 text-white px-6 py-3.5 rounded-lg font-medium transition shadow-lg shadow-brand-600/25 flex items-center gap-2">
@@ -284,7 +302,7 @@
         </div>
     </section>
 
-    <!-- 坪數用量試算機 Section（已優化：純長寬測量，只留建議叫料坪數與箱數） -->
+    <!-- 坪數用量試算機 Section -->
     <section id="calculator" class="py-20 bg-dark-950 border-t border-b border-slate-800/80">
         <div class="max-w-4xl mx-auto px-4 sm:px-6">
             <div class="bg-dark-900 rounded-2xl p-6 sm:p-10 border border-slate-800 shadow-xl">
@@ -341,7 +359,7 @@
                         </div>
                         <div class="mt-6">
                             <button onclick="openLineModal('帶入試算備料坪數諮詢：' + document.getElementById('resTotalPing').innerText)" class="w-full py-3 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold transition flex items-center justify-center gap-1.5 shadow-md shadow-emerald-600/20 active:scale-95">
-                                <i data-lucide="send" class="w-3.5 h-3.5"></i> 將此坪數傳送 LINE 專人精準報價
+                                <i data-lucide="send" class="w-4 h-4"></i> 將此坪數傳送 LINE 專人精準報價
                             </button>
                         </div>
                     </div>
@@ -356,7 +374,7 @@
             <div class="text-center max-w-2xl mx-auto mb-12">
                 <h2 class="text-xs font-bold uppercase tracking-widest text-brand-600 mb-2">OUR PROJECTS</h2>
                 <h3 class="text-3xl font-bold text-white mb-3">現場施工與完工實績</h3>
-                <p class="text-slate-400 text-sm">無論是居家套房改建、商業辦公室、整棟新成屋鋪設，我們重視每道收邊與平整度細節。</p>
+                <p class="text-slate-400 text-sm">歡迎前往我們的官方社群，即時查看最新案場施作照片與工法記錄。</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -436,38 +454,63 @@
             <div class="max-w-3xl mx-auto text-center mb-12">
                 <span class="text-xs font-bold uppercase tracking-widest text-brand-600 mb-2 block">CONTACT US</span>
                 <h3 class="text-3xl font-bold text-white mb-3">歡迎諮詢報價・預約索取樣品</h3>
-                <p class="text-slate-400 text-sm">歡迎直接撥打電話、透過 LINE 或 Email 與宏興聯繫，我們將有專人為您服務！</p>
+                <p class="text-slate-400 text-sm">歡迎直接來電、LINE 官方帳號、或前往 FB、IG、Threads 關注我們的施工實績！</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            <!-- 聯絡方式 4 卡片佈局 -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 max-w-6xl mx-auto">
                 <!-- 電話 -->
-                <a href="tel:0982226991" class="p-6 rounded-xl bg-dark-950 border border-slate-800 text-center hover:border-brand-600/50 transition group">
-                    <div class="w-12 h-12 rounded-full bg-brand-600/10 text-brand-600 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition">
-                        <i data-lucide="phone-call" class="w-6 h-6"></i>
+                <a href="tel:0982226991" class="p-6 rounded-xl bg-dark-950 border border-slate-800 text-center hover:border-brand-600/50 transition group flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-full bg-brand-600/10 text-brand-600 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition">
+                            <i data-lucide="phone-call" class="w-6 h-6"></i>
+                        </div>
+                        <h4 class="text-base font-bold text-white mb-1">電話諮詢</h4>
+                        <p class="text-brand-600 font-bold text-lg mb-1">0982 226 991</p>
                     </div>
-                    <h4 class="text-base font-bold text-white mb-1">電話諮詢</h4>
-                    <p class="text-brand-600 font-bold text-lg mb-1">0982 226 991</p>
-                    <span class="text-xs text-slate-400">點擊直接通話</span>
+                    <span class="text-xs text-slate-400 block mt-2">點擊立即通話</span>
                 </a>
 
                 <!-- LINE -->
-                <div onclick="openLineModal()" class="cursor-pointer p-6 rounded-xl bg-dark-950 border border-slate-800 text-center hover:border-emerald-500/50 transition group">
-                    <div class="w-12 h-12 rounded-full bg-emerald-500/10 text-emerald-400 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition">
-                        <i data-lucide="message-circle" class="w-6 h-6"></i>
+                <div onclick="openLineModal()" class="cursor-pointer p-6 rounded-xl bg-dark-950 border border-slate-800 text-center hover:border-emerald-500/50 transition group flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-full bg-emerald-500/10 text-emerald-400 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition">
+                            <i data-lucide="message-circle" class="w-6 h-6"></i>
+                        </div>
+                        <h4 class="text-base font-bold text-white mb-1">LINE 官方諮詢</h4>
+                        <p class="text-emerald-400 font-bold text-base mb-1">0982226991</p>
                     </div>
-                    <h4 class="text-base font-bold text-white mb-1">LINE 官方線上諮詢</h4>
-                    <p class="text-emerald-400 font-bold text-lg mb-1">即時傳照傳圖</p>
-                    <span class="text-xs text-slate-400">點擊開啟加好友方式</span>
+                    <span class="text-xs text-slate-400 block mt-2">電話搜尋好友／即時報價</span>
+                </div>
+
+                <!-- 官方社群 FB / IG / Threads -->
+                <div class="p-6 rounded-xl bg-dark-950 border border-slate-800 text-center hover:border-blue-500/50 transition group flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-full bg-blue-500/10 text-blue-400 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition">
+                            <i data-lucide="share-2" class="w-6 h-6"></i>
+                        </div>
+                        <h4 class="text-base font-bold text-white mb-1">社群動態與完工照</h4>
+                        <div class="flex justify-center gap-3 my-2 text-xs">
+                            <a href="https://www.facebook.com/people/%E5%8F%B0%E4%B8%AD%E5%AE%8F%E8%88%88%E5%B0%88%E6%A5%AD%E5%9C%B0%E6%9D%BF-%E5%A1%91%E8%86%A0%E5%9C%B0%E6%9D%BFspc%E7%9F%B3%E5%A1%91%E5%8D%A1%E6%89%A3%E5%9C%B0%E6%9D%BF%E7%AA%97%E7%B0%BE%E5%9C%B0%E6%AF%AF%E5%A3%81%E7%B4%99%E6%9C%A8%E5%9C%B0%E6%9D%BF%E7%A2%B3%E6%99%B6%E8%B6%85%E8%80%90%E7%A3%A8%E6%9C%A8%E5%9C%B0%E6%9D%BF/100086376579466" target="_blank" class="text-blue-400 hover:underline font-semibold">FB</a>
+                            <span class="text-slate-600">・</span>
+                            <a href="https://www.instagram.com/hongxing_chou/?hl=zh-tw" target="_blank" class="text-pink-400 hover:underline font-semibold">IG</a>
+                            <span class="text-slate-600">・</span>
+                            <a href="https://www.threads.net/@hong_xing2025" target="_blank" class="text-slate-200 hover:underline font-semibold">Threads</a>
+                        </div>
+                    </div>
+                    <span class="text-xs text-slate-400 block mt-2">追蹤最新案例分享</span>
                 </div>
 
                 <!-- 電子郵件 -->
-                <a href="mailto:vivian662@yahoo.com.tw" class="p-6 rounded-xl bg-dark-950 border border-slate-800 text-center hover:border-brand-600/50 transition group">
-                    <div class="w-12 h-12 rounded-full bg-brand-600/10 text-brand-600 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition">
-                        <i data-lucide="mail" class="w-6 h-6"></i>
+                <a href="mailto:vivian662@yahoo.com.tw" class="p-6 rounded-xl bg-dark-950 border border-slate-800 text-center hover:border-brand-600/50 transition group flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-full bg-brand-600/10 text-brand-600 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition">
+                            <i data-lucide="mail" class="w-6 h-6"></i>
+                        </div>
+                        <h4 class="text-base font-bold text-white mb-1">電子信箱</h4>
+                        <p class="text-slate-200 text-xs font-medium mb-1 break-all">vivian662@yahoo.com.tw</p>
                     </div>
-                    <h4 class="text-base font-bold text-white mb-1">電子信箱</h4>
-                    <p class="text-slate-200 text-xs font-medium mb-1 break-all">vivian662@yahoo.com.tw</p>
-                    <span class="text-xs text-slate-400">工程發包／規格需求</span>
+                    <span class="text-xs text-slate-400 block mt-2">工程圖面／大量採購</span>
                 </a>
             </div>
         </div>
@@ -476,8 +519,22 @@
     <!-- 頁尾 Footer -->
     <footer class="bg-dark-950 border-t border-slate-800 py-10 text-center text-xs text-slate-400">
         <div class="max-w-7xl mx-auto px-4">
-            <p class="mb-2 text-slate-300 font-semibold">台中宏興專業地板・地材行</p>
-            <p class="mb-4">專營：塑膠地板 / SPC石塑卡扣地板 / 碳晶超耐磨木地板 / 木地板 / 精品地磚 / 窗簾 / 地毯 / 壁紙</p>
+            <p class="mb-2 text-slate-300 font-semibold text-sm">台中宏興專業地板・地材行</p>
+            <p class="mb-4 text-slate-400">專營：塑膠地板 / SPC石塑卡扣地板 / 碳晶超耐磨木地板 / 木地板 / 精品地磚 / 窗簾 / 地毯 / 壁紙</p>
+            
+            <!-- 頁尾社群連結 -->
+            <div class="flex justify-center items-center gap-6 my-4">
+                <a href="https://www.facebook.com/people/%E5%8F%B0%E4%B8%AD%E5%AE%8F%E8%88%88%E5%B0%88%E6%A5%AD%E5%9C%B0%E6%9D%BF-%E5%A1%91%E8%86%A0%E5%9C%B0%E6%9D%BFspc%E7%9F%B3%E5%A1%91%E5%8D%A1%E6%89%A3%E5%9C%B0%E6%9D%BF%E7%AA%97%E7%B0%BE%E5%9C%B0%E6%AF%AF%E5%A3%81%E7%B4%99%E6%9C%A8%E5%9C%B0%E6%9D%BF%E7%A2%B3%E6%99%B6%E8%B6%85%E8%80%90%E7%A3%A8%E6%9C%A8%E5%9C%B0%E6%9D%BF/100086376579466" target="_blank" rel="noopener noreferrer" class="hover:text-blue-400 flex items-center gap-1 transition">
+                    <i data-lucide="facebook" class="w-4 h-4"></i> Facebook 粉專
+                </a>
+                <a href="https://www.instagram.com/hongxing_chou/?hl=zh-tw" target="_blank" rel="noopener noreferrer" class="hover:text-pink-400 flex items-center gap-1 transition">
+                    <i data-lucide="instagram" class="w-4 h-4"></i> Instagram
+                </a>
+                <a href="https://www.threads.net/@hong_xing2025" target="_blank" rel="noopener noreferrer" class="hover:text-white flex items-center gap-1 transition">
+                    <i data-lucide="at-sign" class="w-4 h-4"></i> Threads
+                </a>
+            </div>
+
             <p>© <span id="currentYear"></span> 宏興地板. All Rights Reserved.</p>
         </div>
     </footer>
