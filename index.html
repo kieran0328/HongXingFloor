@@ -58,21 +58,10 @@
                     <i data-lucide="phone-call" class="w-3.5 h-3.5 text-brand-600"></i> 0982 226 991
                 </a>
                 <span class="text-slate-600">|</span>
-                <!-- 社群連結按鈕群 -->
-                <div class="flex items-center gap-3">
-                    <a href="https://www.facebook.com/people/%E5%8F%B0%E4%B8%AD%E5%AE%8F%E8%88%88%E5%B0%88%E6%A5%AD%E5%9C%B0%E6%9D%BF-%E5%A1%91%E8%86%A0%E5%9C%B0%E6%9D%BFspc%E7%9F%B3%E5%A1%91%E5%8D%A1%E6%89%A3%E5%9C%B0%E6%9D%BF%E7%AA%97%E7%B0%BE%E5%9C%B0%E6%AF%AF%E5%A3%81%E7%B4%99%E6%9C%A8%E5%9C%B0%E6%9D%BF%E7%A2%B3%E6%99%B6%E8%B6%85%E8%80%90%E7%A3%A8%E6%9C%A8%E5%9C%B0%E6%9D%BF/100086376579466" target="_blank" rel="noopener noreferrer" class="hover:text-blue-400 flex items-center gap-1 transition" title="宏興 Facebook 粉絲專頁">
-                        <i data-lucide="facebook" class="w-3.5 h-3.5"></i>
-                        <span>FB</span>
-                    </a>
-                    <a href="https://www.instagram.com/hongxing_chou/?hl=zh-tw" target="_blank" rel="noopener noreferrer" class="hover:text-pink-400 flex items-center gap-1 transition" title="宏興 Instagram">
-                        <i data-lucide="instagram" class="w-3.5 h-3.5"></i>
-                        <span>IG</span>
-                    </a>
-                    <a href="https://www.threads.net/@hong_xing2025" target="_blank" rel="noopener noreferrer" class="hover:text-white flex items-center gap-1 transition" title="宏興 Threads">
-                        <i data-lucide="at-sign" class="w-3.5 h-3.5"></i>
-                        <span>Threads</span>
-                    </a>
-                </div>
+                <!-- 社群彈窗按鈕 -->
+                <button onclick="openSocialModal()" class="hover:text-white flex items-center gap-1 text-slate-300 transition">
+                    <i data-lucide="share-2" class="w-3.5 h-3.5 text-brand-600"></i> 官方社群 (FB / IG / Threads)
+                </button>
             </div>
         </div>
     </div>
@@ -119,10 +108,10 @@
             <a href="#calculator" class="block text-slate-300 hover:text-brand-600 py-1">用量試算</a>
             <a href="#cases" class="block text-slate-300 hover:text-brand-600 py-1">完工實景</a>
             <a href="#contact" class="block text-slate-300 hover:text-brand-600 py-1">聯絡諮詢</a>
-            <div class="pt-3 border-t border-slate-800 flex gap-4">
-                <a href="https://www.facebook.com/people/%E5%8F%B0%E4%B8%AD%E5%AE%8F%E8%88%88%E5%B0%88%E6%A5%AD%E5%9C%B0%E6%9D%BF-%E5%A1%91%E8%86%A0%E5%9C%B0%E6%9D%BFspc%E7%9F%B3%E5%A1%91%E5%8D%A1%E6%89%A3%E5%9C%B0%E6%9D%BF%E7%AA%97%E7%B0%BE%E5%9C%B0%E6%AF%AF%E5%A3%81%E7%B4%99%E6%9C%A8%E5%9C%B0%E6%9D%BF%E7%A2%B3%E6%99%B6%E8%B6%85%E8%80%90%E7%A3%A8%E6%9C%A8%E5%9C%B0%E6%9D%BF/100086376579466" target="_blank" class="text-blue-400 text-xs flex items-center gap-1">Facebook</a>
-                <a href="https://www.instagram.com/hongxing_chou/?hl=zh-tw" target="_blank" class="text-pink-400 text-xs flex items-center gap-1">Instagram</a>
-                <a href="https://www.threads.net/@hong_xing2025" target="_blank" class="text-slate-300 text-xs flex items-center gap-1">Threads</a>
+            <div class="pt-3 border-t border-slate-800">
+                <button onclick="openSocialModal()" class="w-full text-left text-brand-600 text-xs py-1 flex items-center gap-1.5 font-medium">
+                    <i data-lucide="share-2" class="w-3.5 h-3.5"></i> 查看官方社群 (FB / IG / Threads)
+                </button>
             </div>
             <button onclick="openLineModal()" class="w-full mt-2 flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-2.5 rounded-lg text-sm font-medium transition">
                 <i data-lucide="message-circle" class="w-4 h-4"></i> 加入 LINE 諮詢
@@ -442,7 +431,7 @@
                     </div>
                 </div>
                 <div class="rounded-2xl overflow-hidden border border-slate-800 shadow-2xl relative">
-                    <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1000&q=80" alt="宏興地材嚴選" class="w-full h-auto object-cover">
+                    <img src="https://images.unsplash.com/photo-160058515526-990dced4db0d?auto=format&fit=crop&w=1000&q=80" alt="宏興地材嚴選" class="w-full h-auto object-cover">
                 </div>
             </div>
         </div>
@@ -483,22 +472,16 @@
                     <span class="text-xs text-slate-400 block mt-2">電話搜尋好友／即時報價</span>
                 </div>
 
-                <!-- 官方社群 FB / IG / Threads -->
-                <div class="p-6 rounded-xl bg-dark-950 border border-slate-800 text-center hover:border-blue-500/50 transition group flex flex-col justify-between">
+                <!-- 官方社群 FB / IG / Threads (整張點擊彈出大選單) -->
+                <div onclick="openSocialModal()" class="cursor-pointer p-6 rounded-xl bg-dark-950 border border-slate-800 text-center hover:border-blue-500/50 hover:bg-dark-900/80 transition group flex flex-col justify-between">
                     <div>
                         <div class="w-12 h-12 rounded-full bg-blue-500/10 text-blue-400 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition">
                             <i data-lucide="share-2" class="w-6 h-6"></i>
                         </div>
                         <h4 class="text-base font-bold text-white mb-1">社群動態與完工照</h4>
-                        <div class="flex justify-center gap-3 my-2 text-xs">
-                            <a href="https://www.facebook.com/people/%E5%8F%B0%E4%B8%AD%E5%AE%8F%E8%88%88%E5%B0%88%E6%A5%AD%E5%9C%B0%E6%9D%BF-%E5%A1%91%E8%86%A0%E5%9C%B0%E6%9D%BFspc%E7%9F%B3%E5%A1%91%E5%8D%A1%E6%89%A3%E5%9C%B0%E6%9D%BF%E7%AA%97%E7%B0%BE%E5%9C%B0%E6%AF%AF%E5%A3%81%E7%B4%99%E6%9C%A8%E5%9C%B0%E6%9D%BF%E7%A2%B3%E6%99%B6%E8%B6%85%E8%80%90%E7%A3%A8%E6%9C%A8%E5%9C%B0%E6%9D%BF/100086376579466" target="_blank" class="text-blue-400 hover:underline font-semibold">FB</a>
-                            <span class="text-slate-600">・</span>
-                            <a href="https://www.instagram.com/hongxing_chou/?hl=zh-tw" target="_blank" class="text-pink-400 hover:underline font-semibold">IG</a>
-                            <span class="text-slate-600">・</span>
-                            <a href="https://www.threads.net/@hong_xing2025" target="_blank" class="text-slate-200 hover:underline font-semibold">Threads</a>
-                        </div>
+                        <p class="text-blue-400 font-bold text-sm my-2">FB ・ IG ・ Threads</p>
                     </div>
-                    <span class="text-xs text-slate-400 block mt-2">追蹤最新案例分享</span>
+                    <span class="text-xs text-slate-400 block mt-2 group-hover:text-slate-200 transition">👉 點擊查看社群專頁</span>
                 </div>
 
                 <!-- 電子郵件 -->
@@ -522,25 +505,86 @@
             <p class="mb-2 text-slate-300 font-semibold text-sm">台中宏興專業地板・地材行</p>
             <p class="mb-4 text-slate-400">專營：塑膠地板 / SPC石塑卡扣地板 / 碳晶超耐磨木地板 / 木地板 / 精品地磚 / 窗簾 / 地毯 / 壁紙</p>
             
-            <!-- 頁尾社群連結 -->
+            <!-- 頁尾社群快速點擊按鈕 -->
             <div class="flex justify-center items-center gap-6 my-4">
-                <a href="https://www.facebook.com/people/%E5%8F%B0%E4%B8%AD%E5%AE%8F%E8%88%88%E5%B0%88%E6%A5%AD%E5%9C%B0%E6%9D%BF-%E5%A1%91%E8%86%A0%E5%9C%B0%E6%9D%BFspc%E7%9F%B3%E5%A1%91%E5%8D%A1%E6%89%A3%E5%9C%B0%E6%9D%BF%E7%AA%97%E7%B0%BE%E5%9C%B0%E6%AF%AF%E5%A3%81%E7%B4%99%E6%9C%A8%E5%9C%B0%E6%9D%BF%E7%A2%B3%E6%99%B6%E8%B6%85%E8%80%90%E7%A3%A8%E6%9C%A8%E5%9C%B0%E6%9D%BF/100086376579466" target="_blank" rel="noopener noreferrer" class="hover:text-blue-400 flex items-center gap-1 transition">
-                    <i data-lucide="facebook" class="w-4 h-4"></i> Facebook 粉專
-                </a>
-                <a href="https://www.instagram.com/hongxing_chou/?hl=zh-tw" target="_blank" rel="noopener noreferrer" class="hover:text-pink-400 flex items-center gap-1 transition">
-                    <i data-lucide="instagram" class="w-4 h-4"></i> Instagram
-                </a>
-                <a href="https://www.threads.net/@hong_xing2025" target="_blank" rel="noopener noreferrer" class="hover:text-white flex items-center gap-1 transition">
-                    <i data-lucide="at-sign" class="w-4 h-4"></i> Threads
-                </a>
+                <button onclick="openSocialModal()" class="hover:text-blue-400 flex items-center gap-1.5 transition">
+                    <i data-lucide="share-2" class="w-4 h-4 text-brand-600"></i> 前往官方社群 (FB / IG / Threads)
+                </button>
             </div>
 
             <p>© <span id="currentYear"></span> 宏興地板. All Rights Reserved.</p>
         </div>
     </footer>
 
+    <!-- 社群專屬大按鈕彈窗 Modal -->
+    <div id="socialModal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/75 backdrop-blur-sm p-4">
+        <div class="bg-dark-900 border border-slate-800 rounded-2xl max-w-md w-full p-6 sm:p-8 text-center relative shadow-2xl">
+            <button onclick="closeSocialModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white p-1">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+            
+            <div class="w-14 h-14 bg-blue-500/10 text-blue-400 rounded-full flex items-center justify-center mx-auto mb-4">
+                <i data-lucide="share-2" class="w-7 h-7"></i>
+            </div>
+            
+            <h3 class="text-xl font-bold text-white mb-2">追蹤宏興官方社群</h3>
+            <p class="text-xs text-slate-400 mb-6">歡迎點擊下方平台，查看現場最新完工案例與施工動態：</p>
+            
+            <!-- 三大社群直覺大按鈕 -->
+            <div class="space-y-3">
+                <!-- Facebook 按鈕 -->
+                <a href="https://www.facebook.com/people/%E5%8F%B0%E4%B8%AD%E5%AE%8F%E8%88%88%E5%B0%88%E6%A5%AD%E5%9C%B0%E6%9D%BF-%E5%A1%91%E8%86%A0%E5%9C%B0%E6%9D%BFspc%E7%9F%B3%E5%A1%91%E5%8D%A1%E6%89%A3%E5%9C%B0%E6%9D%BF%E7%AA%97%E7%B0%BE%E5%9C%B0%E6%AF%AF%E5%A3%81%E7%B4%99%E6%9C%A8%E5%9C%B0%E6%9D%BF%E7%A2%B3%E6%99%B6%E8%B6%85%E8%80%90%E7%A3%A8%E6%9C%A8%E5%9C%B0%E6%9D%BF/100086376579466" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-4 rounded-xl bg-blue-600/10 hover:bg-blue-600/20 border border-blue-500/30 text-white transition group">
+                    <div class="flex items-center gap-3.5">
+                        <div class="w-10 h-10 rounded-lg bg-blue-600 text-white flex items-center justify-center shadow-md">
+                            <i data-lucide="facebook" class="w-5 h-5"></i>
+                        </div>
+                        <div class="text-left">
+                            <div class="text-sm font-bold text-white group-hover:text-blue-400 transition">Facebook 官方粉絲專頁</div>
+                            <div class="text-[11px] text-slate-400">完整施工實錄・工班與工程資訊</div>
+                        </div>
+                    </div>
+                    <i data-lucide="external-link" class="w-4 h-4 text-slate-400 group-hover:text-white transition"></i>
+                </a>
+
+                <!-- Instagram 按鈕 -->
+                <a href="https://www.instagram.com/hongxing_chou/?hl=zh-tw" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-4 rounded-xl bg-pink-600/10 hover:bg-pink-600/20 border border-pink-500/30 text-white transition group">
+                    <div class="flex items-center gap-3.5">
+                        <div class="w-10 h-10 rounded-lg bg-gradient-to-tr from-amber-500 via-pink-600 to-purple-600 text-white flex items-center justify-center shadow-md">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                        </div>
+                        <div class="text-left">
+                            <div class="text-sm font-bold text-white group-hover:text-pink-400 transition">Instagram (@hongxing_chou)</div>
+                            <div class="text-[11px] text-slate-400">高清完工美圖・短影音施工細節</div>
+                        </div>
+                    </div>
+                    <i data-lucide="external-link" class="w-4 h-4 text-slate-400 group-hover:text-white transition"></i>
+                </a>
+
+                <!-- Threads 按鈕 -->
+                <a href="https://www.threads.net/@hong_xing2025" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-4 rounded-xl bg-slate-800/60 hover:bg-slate-800 border border-slate-700 text-white transition group">
+                    <div class="flex items-center gap-3.5">
+                        <div class="w-10 h-10 rounded-lg bg-black text-white flex items-center justify-center border border-slate-700 shadow-md">
+                            <i data-lucide="at-sign" class="w-5 h-5"></i>
+                        </div>
+                        <div class="text-left">
+                            <div class="text-sm font-bold text-white group-hover:text-slate-200 transition">Threads (@hong_xing2025)</div>
+                            <div class="text-[11px] text-slate-400">日常即時案場分享・問答互動</div>
+                        </div>
+                    </div>
+                    <i data-lucide="external-link" class="w-4 h-4 text-slate-400 group-hover:text-white transition"></i>
+                </a>
+            </div>
+
+            <div class="mt-6">
+                <button onclick="closeSocialModal()" class="w-full py-2.5 rounded-lg bg-dark-950 hover:bg-slate-800 border border-slate-800 text-slate-300 text-xs font-medium transition">
+                    關閉視窗
+                </button>
+            </div>
+        </div>
+    </div>
+
     <!-- LINE 諮詢彈窗 Modal -->
-    <div id="lineModal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm p-4">
+    <div id="lineModal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/75 backdrop-blur-sm p-4">
         <div class="bg-dark-900 border border-slate-800 rounded-2xl max-w-sm w-full p-6 text-center relative shadow-2xl">
             <button onclick="closeLineModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white">
                 <i data-lucide="x" class="w-5 h-5"></i>
@@ -631,6 +675,15 @@
 
         // 初始化先執行一次
         updateCalc();
+
+        // 社群彈窗邏輯
+        function openSocialModal() {
+            document.getElementById('socialModal').classList.remove('hidden');
+        }
+
+        function closeSocialModal() {
+            document.getElementById('socialModal').classList.add('hidden');
+        }
 
         // LINE 諮詢彈窗
         function openLineModal(customText) {
